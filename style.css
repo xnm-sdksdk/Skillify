@@ -1,0 +1,257 @@
+:root {
+    --primary-color: #f45ea0;
+    --second-color: #b555a1;
+    --third-color: #9051a2;
+    --fourth-color: #674ba2;
+    --fifth-color: #4b48a3;
+    --six-color: #2943a3;
+}
+
+@font-face {
+    font-family: 'Adelle Mono', Flex-Bold;
+    src: url('../fonts/AdelleMonoFlex-Bold.eot?#iefix') format('embedded-op')
+}
+
+html {
+    scroll-behavior: smooth;
+}
+@media screen and (min-width: 414px) {
+    .header {
+        margin: 0px 0px 0px 0px;
+        display: grid;
+    }
+    body {
+        background-color: var(--primary-color);
+        display: grid;
+    }
+
+    #title {
+        color: #ffffff;
+        font-family: 'Adelle Mono', Flex-Bold;
+        font-size: 40px;
+        margin: 15px 0px 0px 5px;
+    }
+
+    .dot {
+        height: 35px;
+        width: 35px;
+        background-color: #ffffff;
+        border-radius: 50%;
+        display: inline-block;
+        margin: 15px 10px 0px 15px;
+    }
+
+    #menu {
+        width: 60%;
+        margin: 7px 0px 0px 6px;
+        display: block;
+    }
+
+    #logo_intro {
+        width: 40%;
+        margin: 0px 0px 0px 15px;
+    }
+
+/*
+Alternativa
+    #title_2 {
+        color: #ffffff;
+        font-family: 'Adelle Mono', Flex-Bold;
+        font-size: 30px;
+        display: inline-block;
+        white-space: nowrap;
+        margin: 0px 30px 0px 0px;
+    }
+*/
+    .title {
+        color: #ffffff;
+        font-family: 'Adelle Mono', Flex-Bold;
+        text-transform: uppercase;
+        line-height: 40px;
+        margin: 0px 0px 0px 200px;
+    }
+
+    .title-content {
+        display: block;
+        opacity: 0;
+        animation: revealText .8s forwards;
+    }
+
+    .title-second {
+        animation-delay: .200s;
+    }
+    
+    .title-third {
+        animation-delay: .25s;
+    }
+
+    @keyframes revealText {
+        from {
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: none;
+        }
+    }
+
+    .button, .registNow{
+        background-color: #9051a2;
+        border: none;
+        color: white;
+        padding: 10px 10px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 10px;
+        cursor: pointer;
+        margin: 10px 0px 0px 0px;
+    }
+    
+    .button, .logIn {
+        background-color: #9051a2;
+        border: none;
+        color: white;
+        padding: 10px 15px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        white-space: nowrap;
+        font-size: 10px;
+        cursor: pointer;
+        margin: 10px 60px 0px 0px;
+    }
+    
+    .btn:hover {
+        animation: pulsate 1s ease-in-out;
+    }
+    
+    @keyframes pulsate {
+        0% {
+            box-shadow:
+            0 0 50px #4b48a3,
+            0 0 25px #f45ea0;
+        }
+    }
+
+    #who_title {
+        color: #ffffff;
+        font-family: 'Adelle Mono', Flex-Bold;
+        font-size: 50px;
+        text-align: center;
+    }
+
+    p {
+        color: white;
+        text-align: center;
+    }
+
+    .card {
+        position: relative;
+        width: 250px;
+        height: 250px;
+        color: #ffffff;
+        background: url('./n.jpg') center no-repeat;
+        background-size: cover;
+        border-radius: 20px;
+        overflow: hidden;
+        margin: 0px 0px 0px 80px;
+    }
+
+    #about_target {
+        color: white;
+        font-family: 'Adelle Mono', Flex-Bold;
+        font-size: 30px;
+        text-align: center;
+    }
+
+    #about_title {
+        color: white;
+        font-family: 'Adelle Mono', Flex-Bold;
+        font-size: 30px;
+        text-align: center;
+    }
+
+    #important {
+        text-align: center;
+        color: #ffffff;
+        font-size: 30px;
+    }
+
+    #missing {
+        text-align: center;
+        color: #ffffff;
+        font-size: 30px;
+    }
+    
+    #methods_target {
+        color: white;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    #methods_title {
+        color: white;
+        font-size: 40px;
+        text-align: center;
+    }
+
+    #videos_title{
+        color: white;
+        font-size: 30px;
+        text-align: center;
+    }
+
+    #practice_title {
+        color: white;
+        font-size: 30px;
+        text-align: center;
+    }
+
+    #learn {
+        color: white;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    #courses_title {
+        color: white;
+        font-size: 40px;
+        text-align: center;
+    }
+
+    h2{
+        color: white;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    #courses_target {
+        color: white;
+        font-size: 25px;
+        text-align: center;
+    }
+
+    #courses_title {
+        color: white;
+        font-size: 50px;
+        text-align: center;
+    }
+
+
+}
+
+@media screen and (min-width: 992px) {
+    body {
+        background-color: var(--primary-color);
+    }
+}
+
+
+.courses_target {
+    color: white;
+}
+
+.courses_target {
+    color: white;
+}
