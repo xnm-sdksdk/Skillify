@@ -1,0 +1,185 @@
+:root {
+  --primary-color: #f45ea0;
+  --second-color: #b555a1;
+  --third-color: #9051a2;
+  --fourth-color: #674ba2;
+  --fifth-color: #4b48a3;
+  --six-color: #2943a3;
+}
+
+@font-face {
+    font-family: 'Adelle Mono', Flex-Bold;
+    src: url(../fonts/AdelleMonoFlex-Bold.ttf) format('embedded-op');
+}
+
+@media only screen and (min-width: 414px) {
+*{
+  box-sizing: content-box;
+  font-family: 'Adelle Mono', Flex-Bold;
+  scroll-behavior: smooth;
+}
+
+#title {
+  color: #ffffff;
+  font-family: 'Adelle Mono', Flex-Bold;
+  font-size: 50px;
+  margin: 30px 0px 0px 0px;
+}
+.dot {
+  height: 35px;
+  width: 35px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 20px 0px 0px 150px;
+}
+
+#menu {
+  width: 60%;
+  margin: 7px 0px 0px 6px;
+  display: block;
+}
+
+
+body{
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  background: var(--third-color);
+}
+
+section{
+  height: 450px;
+  width: 900px;
+  display: grid;
+  align-items: center;
+  margin: 750px 0px 0px 0px;
+}
+
+.swiper{
+  width: 2000px;
+}
+
+.card{
+  position: relative;
+  background: #fff;
+  border-radius: 20px;
+  margin: 40px 0;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card::before{
+  content: "";
+  position: absolute;
+  height: 50%;
+  width: 100%;
+  background: var(--fourth-color);
+  border-radius: 20px 20px 0 0;
+}
+
+.card .card-content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  position: relative;
+  z-index: 100;
+}
+
+/*circulo para imagens
+section .card .image{
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  padding: 3px;
+  background: #ffff;
+}
+
+section .card .image img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #fff;
+}
+*/
+
+.card .name-course{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  margin-top: 10px;
+  font-size: 25px;
+  font-family: 'Adelle Mono', Flex-Bold;
+  color: #ffffff;
+} 
+
+.name-course .enter{
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/*.name-course .description{
+  font-size: 15px;
+  font-weight: 500;
+}
+*/
+.card .rating{
+  display: flex;
+  align-items: center;
+  margin-top: 60px;
+}
+
+.card .rating i{
+  font-size: 18px;
+  margin: 0 2px;
+  color: var(--third-color);
+}
+
+.card .button{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.card .button button{
+  background: var(--third-color);
+  outline: none;
+  border: none;
+  color: #fff;
+  padding: 8px 22px;
+  border-radius: 20px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.button button:hover{
+  background: var(--primary-color)
+}
+
+.swiper-pagination{
+  position: absolute;
+}
+
+.swiper-pagination-bullet{
+  height: 7px;
+  width: 40px;
+  border-radius: 25px;
+  background: #ffffff;
+}
+
+.swiper-button-next, .swiper-button-prev{
+  opacity: 0.7;
+  color: #ffffff;
+  transition: all 0.3s ease;
+}
+.swiper-button-next:hover, .swiper-button-prev:hover{
+  opacity: 0.7;
+  color: #ffffff;
+}
+
+
+}
