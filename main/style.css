@@ -14,15 +14,21 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
-@media screen and (min-width: 414px) {
+
+
+/*Screen size Iphone XR - 414 x 896*/
+@media only screen and (min-width: 414px) {
     .header {
         margin: 0px 0px 0px 0px;
         display: grid;
     }
+
     body {
         background-color: var(--primary-color);
         display: grid;
+        overflow-x: hidden;
     }
 
     #title {
@@ -31,14 +37,13 @@ html {
         font-size: 40px;
         margin: 15px 0px 0px 5px;
     }
-
     .dot {
         height: 35px;
         width: 35px;
         background-color: #ffffff;
         border-radius: 50%;
         display: inline-block;
-        margin: 15px 10px 0px 15px;
+        margin: 20px 7px 0px 15px;
     }
 
     #menu {
@@ -47,10 +52,50 @@ html {
         display: block;
     }
 
+
     #logo_intro {
-        width: 40%;
+        width: 50%;
         margin: 0px 0px 0px 15px;
     }
+
+    .nav {
+        height: 100%;
+        width: 80%;
+        z-index: 1;
+        top: 0;
+        background-color: var(--primary-color);
+        overflow-x: hidden;
+        padding: 60px;
+        transition: 0.7s;
+        margin: 0px 0px 0px 0px;
+    }
+
+    .nav a{
+        display: block;
+        padding: 20px 30px;
+        font-size: 25px;
+        text-decoration: none;
+        color: #ffffff;
+    }
+
+    .nav a:hover {
+        color: #ffffff;
+        transition: 0.4s;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*
 Alternativa
@@ -68,20 +113,23 @@ Alternativa
         font-family: 'Adelle Mono', Flex-Bold;
         text-transform: uppercase;
         line-height: 40px;
-        margin: 0px 0px 0px 200px;
+        margin: 20px 0px 0px 200px;
     }
 
     .title-content {
+        font-family: 'Adelle Mono', Flex-Bold;
         display: block;
         opacity: 0;
         animation: revealText .8s forwards;
     }
 
     .title-second {
+        font-family: 'Adelle Mono', Flex-Bold;
         animation-delay: .200s;
     }
     
     .title-third {
+        font-family: 'Adelle Mono', Flex-Bold;
         animation-delay: .25s;
     }
 
@@ -96,19 +144,21 @@ Alternativa
     }
 
     .button, .registNow{
+        font-family: 'Adelle Mono', Flex-Bold;
         background-color: #9051a2;
         border: none;
         color: white;
-        padding: 10px 10px;
+        padding: 10px 15px;
         text-align: center;
         text-decoration: none;
         display: inline-block;
         font-size: 10px;
         cursor: pointer;
-        margin: 10px 0px 0px 0px;
+        margin: 20px 0px 0px 200px;
     }
     
     .button, .logIn {
+        font-family: 'Adelle Mono', Flex-Bold;
         background-color: #9051a2;
         border: none;
         color: white;
@@ -119,7 +169,7 @@ Alternativa
         white-space: nowrap;
         font-size: 10px;
         cursor: pointer;
-        margin: 10px 60px 0px 0px;
+        margin: 20px 40px 0px 0px;
     }
     
     .btn:hover {
@@ -134,20 +184,80 @@ Alternativa
         }
     }
 
+    #dot_cursos {
+        position: fixed;
+        height: 45px;
+        width: 45px;
+        background-color: #ffffff;
+        border-radius: 50%;
+        display: inline-block;
+        margin: 40px 0px 0px 20px;
+    }
+
+    #cursos{
+        width: 80%;
+        margin: 7px 0px 0px 6px;
+        display: block;
+    }
+
+
+    #dot_perfil {
+        position: fixed;
+        height: 45px;
+        width: 45px;
+        background-color: #ffffff;
+        border-radius: 50%;
+        display: inline-block;
+        margin: 40px 0px 0px 130px;
+    }
+
+    #perfil {
+        width: 50%;
+        margin: 9px 0px 0px 11px;
+        display: block;
+    }
+
+    #who_color {
+        background-color: var(--second-color);
+    }
+
     #who_title {
         color: #ffffff;
         font-family: 'Adelle Mono', Flex-Bold;
         font-size: 50px;
         text-align: center;
+        margin: 180px 0px 0px 0px;
     }
 
     p {
         color: white;
         text-align: center;
+        margin: 0px 100px 0px 0px;
+    }
+
+    .card_lucas {
+        width: 250px;
+        height: 250px;
+        color: #ffffff;
+        background: url('./img/Lucas.png') center no-repeat;
+        background-size: cover;
+        border-radius: 20px;
+        overflow: hidden;
+        margin: 50px 0px 0px 0px;
+    }
+
+    .card_nuno {
+        width: 250px;
+        height: 250px;
+        color: #ffffff;
+        background: url('./img/n.jpg') center no-repeat;
+        background-size: cover;
+        border-radius: 20px;
+        overflow: hidden;
+        margin: 50px 0px 0px 0px;
     }
 
     .card {
-        position: relative;
         width: 250px;
         height: 250px;
         color: #ffffff;
@@ -155,89 +265,159 @@ Alternativa
         background-size: cover;
         border-radius: 20px;
         overflow: hidden;
-        margin: 0px 0px 0px 80px;
+        margin: 50px 0px 0px 0px;
     }
+
 
     #about_target {
         color: white;
         font-family: 'Adelle Mono', Flex-Bold;
-        font-size: 30px;
+        font-size: 20px;
         text-align: center;
+        margin: 80px 0px 0px 0px;
     }
+    
+    #about_color{
+        background-color: #9051a2;
+    }
+
 
     #about_title {
         color: white;
         font-family: 'Adelle Mono', Flex-Bold;
-        font-size: 30px;
+        font-size: 50px;
         text-align: center;
+        margin: 40px 0px 0px 0px;
     }
 
     #important {
+        font-family: 'Adelle Mono', Flex-Bold;
         text-align: center;
         color: #ffffff;
         font-size: 30px;
+        margin: 80px 0px 0px 0px;
     }
 
     #missing {
+        font-family: 'Adelle Mono', Flex-Bold;
         text-align: center;
         color: #ffffff;
         font-size: 30px;
+        margin: 80px 0px 0px 0px;
     }
     
     #methods_target {
+        font-family: 'Adelle Mono', Flex-Bold;
         color: white;
         font-size: 20px;
         text-align: center;
+        margin: 80px 0px 0px 0px;
     }
+
+    #methods_color {
+        background-color: #674ba2;
+    }
+
 
     #methods_title {
-        color: white;
-        font-size: 40px;
-        text-align: center;
-    }
-
-    #videos_title{
-        color: white;
-        font-size: 30px;
-        text-align: center;
-    }
-
-    #practice_title {
-        color: white;
-        font-size: 30px;
-        text-align: center;
-    }
-
-    #learn {
-        color: white;
-        font-size: 20px;
-        text-align: center;
-    }
-
-    #courses_title {
-        color: white;
-        font-size: 40px;
-        text-align: center;
-    }
-
-    h2{
-        color: white;
-        font-size: 20px;
-        text-align: center;
-    }
-
-    #courses_target {
-        color: white;
-        font-size: 25px;
-        text-align: center;
-    }
-
-    #courses_title {
+        font-family: 'Adelle Mono', Flex-Bold;
         color: white;
         font-size: 50px;
         text-align: center;
+        margin: 80px 0px 0px 0px;
     }
 
+/*Video PLayer*/
+
+
+
+
+
+
+
+    #videos_title{
+        font-family: 'Adelle Mono', Flex-Bold;
+        color: white;
+        font-size: 30px;
+        text-align: center;
+        margin: 80px 0px 0px 0px;
+    }
+
+    #practice_title {
+        font-family: 'Adelle Mono', Flex-Bold;
+        color: white;
+        font-size: 30px;
+        text-align: center;
+        margin: 80px 0px 0px 0px;
+    }
+
+    #learn {
+        font-family: 'Adelle Mono', Flex-Bold;
+        color: white;
+        font-size: 20px;
+        text-align: center;
+        margin: 80px 0px 0px 0px;
+    }
+
+    #courses_title {
+        font-family: 'Adelle Mono', Flex-Bold;
+        color: white;
+        font-size: 40px;
+        text-align: center;
+        margin: 80px 0px 0px 0px;
+    }
+
+    h2{
+        font-family: 'Adelle Mono', Flex-Bold;
+        color: white;
+        font-size: 20px;
+        text-align: center;
+        margin: 80px 0px 0px 0px;
+    }
+
+    #courses_target {
+        font-family: 'Adelle Mono', Flex-Bold;
+        color: white;
+        font-size: 25px;
+        text-align: center;
+        margin: 80px 0px 0px 0px;
+    }
+
+    #courses_color {
+        background-color: #4b48a3
+    }
+
+    #courses_title {
+        font-family: 'Adelle Mono', Flex-Bold;
+        color: white;
+        font-size: 50px;
+        text-align: center;
+        margin: 80px 0px 0px 0px;
+    }
+
+
+    .courses_target {
+        font-family: 'Adelle Mono', Flex-Bold;
+        color: white;
+        font-size: 30px;
+        text-align: center;
+        margin: 80px 0px 0px 0px;
+    }
+
+    #dot_up {
+        height: 45px;
+        width: 45px;
+        background-color: #ffffff;
+        border-radius: 50%;
+        display: inline-block;
+        margin: 80px 0px 60px 350px;
+    }
+
+    #go_up {
+        width: 60%;
+        margin: 10px 0px 0px 9px;
+        display: block;
+    }
 
 }
 
@@ -245,13 +425,4 @@ Alternativa
     body {
         background-color: var(--primary-color);
     }
-}
-
-
-.courses_target {
-    color: white;
-}
-
-.courses_target {
-    color: white;
 }
