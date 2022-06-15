@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="style.css" type="text/css">
     <title>Skillify</title>
 </head>
@@ -21,20 +22,51 @@
                 </div>
                 <div class="col">
                 </div>
-                <div class="col">
-                <span class="dot"><img class="img-responsive" src="menu.png" id="menu" alt="menu"></span>
-                </div>
+        <div id="content_menu">
+            <div class="col slide">
+                <span class="dot">
+                    <a href="#" onclick="openSlideMenu()">
+                        <img class="img-responsive" src="./img/menu.png" id="menu" alt="menu">
+                    </a>
+                </span>
+            </div>
+            <!--
+            <div id="nav_menu" class="nav">
+                <a href="#" class="close" onclick="closeSlideMenu()">
+                    <span class="material-symbols-outlined">close</span>
+                </a>
+                <br>
+                <a href="#">Intro</a>
+                <br>
+                <a href="#">Who</a>
+                <br>
+                <a href="#">About</a>
+                <br>
+                <a href="#">Our Methods</a>
+                <br>
+                <a href="#">Courses</a>
+
+                <br>
+                <br>
+
+                <a href="#">Facebook</a>
+                <a href="#">Instagram</a>
+                <a href="#">Linkedin </a>
+            </div>
+            -->
+        </div>
         </div>
     </header>
 </div>
     
 <body>
 <br>
+<br>
 <div class="container">
     <div class="row">
         <div class="col">
             <div class="col">
-                <img class="img-responsive" id="logo_intro" src="Logo_final.png" alt="Skillify">
+                <img class="img-responsive" id="logo_intro" src="./img/Logo_final.png" alt="Skillify">
             </div>
         </div>
     </div>
@@ -50,6 +82,7 @@
         </div>
     </div>
 -->
+<br>
 <h1 class="title">
     <span class="title-content">Boost your</span>
     <span class="title-content title-second">Skills with</span>
@@ -58,64 +91,97 @@
 
 <div class="row">
     <div class="col">
+        <a href="../profile/login_system.html"><h4 class="btn registNow">Register</h4></a>
     </div>
     <div class="col">
-    </div>
-    <div class="col">
-    </div>
-    <div class="col">
-        <h4 class="btn registNow">Register</h4>
-    </div>
-    <div class="col">
-        <h4 class="btn logIn">Log In</h4>
+        <a href="../profile/login_system.html"></a><h4 class="btn logIn">Log In</h4></a>
     </div>
 </div>
 
 <br>
 <br>
 <br>
+<br>
+
+
+<div class="row">
+    <div class="col">
+    </div>
+    <div class="col">
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+        <!--Acesso aos cursos-->
+        <span id="dot_cursos"><img class="img-responsive" src="./img/magistrate.png" id="perfil" alt="profile"></span>
+    </div>
+    <div class="col">
+    <!--Acesso ao Perfil-->
+    <span id="dot_perfil"><img class="img-responsive" src="./img/user.png" id="perfil" alt="profile"></span>
+    </div>
+</div>
+
+<br>
+<br>
+
+
+
+<!--Beginning of Who-->
+<div class="who_start">
+
+<div id="who_color">
 
 <h1 class="" id="who_title">Who</h1>
 
+<br>
 <p>random text</p>
 
 <br>
 <br>
-<!--Who cards -->
-<article class="card">
+<div class="container d-flex justify-content-center">
+    <!--Who cards -->
+<article class="card_lucas">
     <div class="card_content">
         <h5 class="card_title">Lucas Silva, Júnior Developer</h5>
         <p class="card_description">An perfectly synchronized random text</p>
     </div>
 </article>
+</div>
+
 
 <br>
 <br>
-<article class="card">
+<div class="container d-flex justify-content-center">
+<article class="card_nuno">
     <div class="card_content">
         <h5 class="card_title">Nuno Mendonça</h5>
         <h3 class="card_subtitle">Junior Developer</h3>
         <p class="card_description">An perfectly synchronized random text</p>
     </div>
 </article>
+</div>
 
 <br>
 <br>
 
+<div class="container d-flex justify-content-center">
 <article class="card">
     <div class="card_content">
         <h5 class="card_title">Tiago Ribeiro, Júnior Developer</h5>
         <p class="card_description">An perfectly synchronized random text</p>
     </div>
 </article>
+</div>
 
 <br>
 <br>
 
-<h4 class="" id="about_target">Find out More ABOUT Skillify</h4>
+<h4 class="" id="about_target">Find out More ABOUT <br> Skillify</h4>
 
-<br><br>
-
+<br>
+</div>
+</div>
+<div id="about_color">
 <h1 class="" id="about_title">About</h1>
 
 <br>
@@ -124,8 +190,12 @@
 
 <br>
 <br>
+<br>
 
-<h4 id="important">What Makes Soft Skills Important</h4>
+<h4 id="important">What Makes Soft <br> Skills Important</h4>
+
+<br>
+<br>
 
 <p>Random text</p>
 
@@ -143,11 +213,14 @@
 
 <br>
 <br>
+</div>
 
+<div id="methods_color">
 <h1 class="" id="methods_title">Methods</h1>
 <br>
-<!--VIdeo promocional-->
-<p>video</p>
+
+<!--Video-->
+
 
 <br>
 <br>
@@ -169,9 +242,9 @@
 <br>
 <br>
 <br>
+</div>
 
-
-
+<div id="courses_color">
 <h1 class="" id="courses_title">Courses</h1>
 <br>
 
@@ -227,9 +300,9 @@
 
 <h4 class="" id="courses_target">Take me there</h4>
 
-<br><br>
+<span id="dot_up"><img src="./img/up.png" class="img-responsive" id="go_up" alt="GoUp"></span>
 
-<p>button to go up</p>
+</div>
 </div>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
