@@ -14,6 +14,7 @@ export class User {
   achievements = [];
   badges = [];
   status = "";
+  avatar = "";
 
   constructor(
     id,
@@ -39,6 +40,7 @@ export class User {
     this.achievements = [];
     this.badges = [];
     this.status = "normal";
+    this.avatar = "../../imgs/main/user.png";
   }
 
   //* METHODS
@@ -121,7 +123,7 @@ export function logout() {
 
 // VERIFY IF THERE'S AN USER AUTHENTICATED
 export function isLogged() {
-  return session.Storage.loggedUser ? true : false;
+  return sessionStorage.loggedUser ? true : false;
 }
 
 // RETURN USER AUTHENTICATED
