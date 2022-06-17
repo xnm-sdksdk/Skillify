@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles/profile.css" />
+    <title>Login</title>
+  </head>
+  <body>
+    <div class="container">
+      <form class="form" id="createAccount">
+        <h1 class="form_title">Create Account</h1>
+        <div class="form_message form_message-error"></div>
+
+        <!--Name-->
+        <div class="form_input-group">
+          <input
+            type="text"
+            id="signName"
+            class="form_input"
+            autofocus
+            placeholder="Name"
+            required
+          />
+          <div class="form_input-error-message"></div>
+        </div>
+
+        <!--Date of Birth-->
+        <div class="form_input-group">
+          <input
+            type="date"
+            id="dateBirth"
+            class="form_input"
+            autofocus
+            placeholder="Date of Birth"
+            required
+          />
+          <div class="form_input-error-message"></div>
+        </div>
+
+        <!--Gender-->
+        <div class="form_input-group">
+          <select id="genderSelect" class="form_input" required>
+            <option selected disabled>Gender</option>
+            <option value="Masculine">Masculine</option>
+            <option value="Feminine">Feminine</option>
+            <option value="Other">Other</option>
+          </select>
+          <div class="form_input-error-message"></div>
+        </div>
+
+        <!--UserName-->
+        <div class="form_input-group">
+          <input
+            type="text"
+            id="signUserName"
+            class="form_input"
+            autofocus
+            placeholder="Username"
+            required
+          />
+          <div class="form_input-error-message"></div>
+        </div>
+
+        <!--Location-->
+        <div class="form_input-group">
+          <select id="selectLocality" class="form_input" required>
+            <option selected disabled>Locality</option>
+            <option value="Aveiro">Aveiro</option>
+            <option value="Beja">Beja</option>
+            <option value="Braga">Braga</option>
+            <option value="Bragança">Bragança</option>
+            <option value="Castelo_Branco">Castelo Branco</option>
+            <option value="Coimbra">Coimbra</option>
+            <option value="Evora">Évora</option>
+            <option value="Faro">Faro</option>
+            <option value="Guarda">Guarda</option>
+            <option value="Leiria">Leiria</option>
+            <option value="Lisboa">Lisboa</option>
+            <option value="Portalegre">Portalegre</option>
+            <option value="Porto">Porto</option>
+            <option value="Santarem">Santarém</option>
+            <option value="Setubal">Sétubal</option>
+            <option value="Viana_do_Castelo">Viana do Castelo</option>
+            <option value="Vila_Real">Vila Real</option>
+            <option value="Viseu">Viseu</option>
+            <option value="Viseu">Other</option>
+          </select>
+          <div class="form_input-error-message"></div>
+        </div>
+
+        <!--E-mail-->
+        <div class="form_input-group">
+          <input
+            id="email"
+            type="text"
+            class="form_input"
+            autofocus
+            placeholder="E-mail Address"
+            required
+          />
+          <div class="form_input-error-message"></div>
+        </div>
+
+        <!--Password-->
+        <div class="form_input-group">
+          <input
+            id="signPassword"
+            type="password"
+            class="form_input"
+            autofocus
+            placeholder="Password"
+            required
+          />
+          <div class="form_input-error-message"></div>
+        </div>
+
+        <!--Password Confirmer-->
+        <div class="form_input-group">
+          <input
+            id="signPasswordConfirm"
+            type="password"
+            class="form_input"
+            autofocus
+            placeholder="Confirm Password"
+            required
+          />
+          <div class="form_input-error-message"></div>
+        </div>
+
+        <button class="form_button" type="submit">Continue</button>
+
+        <p class="form_text">
+          <a href="./logIn.html" class="form_link" id="linkLogin"
+            >Already have an account? Sign In</a
+          >
+        </p>
+      </form>
+    </div>
+
+    <script type="module" src="../js/register.js"></script>
+  </body>
+</html>

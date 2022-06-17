@@ -1,0 +1,32 @@
+:root {
+  --primary-color: #f45ea0;
+  --second-color: #b555a1;
+  --third-color: #9051a2;
+  --fourth-color: #674ba2;
+  --fifth-color: #4b48a3;
+  --six-color: #2943a3;
+}
+
+@import url("https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/css/bootstrap.min.css");
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-color: var(--primary-color);
+  display: grid;
+}
+
+.btn {
+  background-color: var(--six-color);
+  flex: 0 1 400px;
+  margin: 10px;
+  transition: 1s;
+}
+
+.container {
+  background-color: white;
+  border: 10px solid var(--third-color);
+  border-radius: 10px;
+}
