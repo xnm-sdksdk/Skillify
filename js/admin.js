@@ -116,6 +116,11 @@ document.querySelector("#changeUserStatusBtn").addEventListener("click", () => {
   // Load Users
   userModel.init();
 
+  //Reset select list
+  document.querySelector(
+    "#selectUser"
+  ).innerHTML = `<option selected disabled>Users</option>`;
+
   // Add Users to Select List
   for (let user in userModel.users) {
     document.querySelector("#selectUser").innerHTML += `
@@ -177,6 +182,11 @@ document.querySelector("#modifyUserBtn").addEventListener("click", () => {
 
   // Load Users
   userModel.init();
+
+  //Reset select list
+  document.querySelector(
+    "#modifySelectUser"
+  ).innerHTML = `<option selected disabled>Users</option>`;
 
   // Add Users to Select List
   for (let user in userModel.users) {
