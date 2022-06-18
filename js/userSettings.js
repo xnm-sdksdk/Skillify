@@ -15,7 +15,9 @@ document.querySelector("#dateInput").value = currentUser.dateOfBirth;
 document.querySelector("#genderInput").value = currentUser.gender;
 document.querySelector("#localityInput").value = currentUser.locality;
 document.querySelector("#avatarInput").value =
-  currentUser.avatar == "../../imgs/main/user.png" ? "" : currentUser.avatar;
+  currentUser.avatar == "../../imgs/main/user.png"
+    ? "Default"
+    : currentUser.avatar;
 
 // ADD EVENT TO BACK BUTTON
 document.querySelector("#backBtn").addEventListener("click", () => {
@@ -47,7 +49,7 @@ document.querySelector("form").addEventListener("submit", (event) => {
   event.preventDefault();
 
   // clear success message
-  document.querySelector("#successMsg").innerHTML = "";
+  document.querySelector("#successMsg").innerText = "";
 
   // Load Users
   userModel.init();
@@ -71,15 +73,28 @@ document.querySelector("form").addEventListener("submit", (event) => {
         document.querySelector("#localityInput").value;
 
       userModel.users[user].avatar =
-        userModel.users[user].avatar == ""
+        document.querySelector("#avatarInput").value == "Default"
           ? "../../imgs/main/user.png"
           : document.querySelector("#avatarInput").value;
 
-      //Update Local Storage
-      localStorage.users = JSON.stringify(userModel.users);
+      //update currentUser variable
+      currentUser.name = document.querySelector("#nameInput").value;
+      currentUser.email = document.querySelector("#emailInput").value;
+      currentUser.password = document.querySelector("#pwInput").value;
+      currentUser.dateOfBirth = document.querySelector("#dateInput").value;
+      currentUser.gender = document.querySelector("#genderInput").value;
+      currentUser.locality = document.querySelector("#localityInput").value;
+      currentUser.avatar =
+        document.querySelector("#avatarInput").value == "Default"
+          ? "../../imgs/main/user.png"
+          : document.querySelector("#avatarInput").value;
 
+      //Update Local Storage and Session Storage
+      localStorage.users = JSON.stringify(userModel.users);
+      sessionStorage.loggedUser = JSON.stringify(currentUser);
+
+      document.querySelector("#successMsg").innerText = "New Settings Applied";
       break;
     }
-    document.querySelector("#successMsg").innerHTML = "New Settings Applied";
   }
 });
