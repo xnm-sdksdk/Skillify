@@ -272,7 +272,9 @@
             <br />
             <p class="text-center">
               <label for="modifyUserList">Users:</label>
-              <select id="modifySelectUser"></select>
+              <select id="modifySelectUser">
+                <option selected disabled>Users:</option>
+              </select>
             </p>
 
             <!--Name-->
@@ -332,6 +334,11 @@
               <option value="Vila_Real">Vila Real</option>
               <option value="Viseu">Viseu</option>
               <option value="Other">Other</option>
+            </select>
+            <br />
+            <select id="modifySelectType">
+              <option value="user">User</option>
+              <option value="admin">Admin</option>
             </select>
             <br />
             <p class="text-center text-danger" id="modifyErrorMsg"></p>

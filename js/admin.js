@@ -1,6 +1,14 @@
 import * as userModel from "./models/userModel.js";
 import * as courseModel from "./models/courseModel.js";
 
+// CHECK IF CURRENT USER IS AN ADMIN
+if (!userModel.isLogged()) {
+  window.open("../html/logIn.html", "_self");
+}
+if (userModel.getUserLogged().type != "admin") {
+  window.open("../html/userprofile.html", "_self");
+}
+
 /* MANAGE USERS */
 
 // ADD NEW USER
@@ -13,6 +21,9 @@ document
   .querySelector("#addNewUserForm")
   .addEventListener("submit", (event) => {
     event.preventDefault();
+
+    if (document.querySelector("#changeUserStatusBtn").value == "Users:")
+      return;
 
     //Clear warning message
     document.querySelector("#errorMsg").innerText = "";
@@ -113,10 +124,13 @@ document.querySelector("#changeUserStatusBtn").addEventListener("click", () => {
     option.addEventListener("click", function () {
       const optionUserName = this.value;
 
-      const userSelectedStatus =
-        userModel.users[
-          userModel.users.find((user) => user.username === optionUserName)
-        ].status;
+      let userSelectedStatus = "";
+
+      for (let user in userModel.users) {
+        if (userModel.users[user].username === optionUserName) {
+          userSelectedStatus = userModel.users[user].status;
+        }
+      }
 
       //show user status
       document.querySelector(
@@ -125,7 +139,7 @@ document.querySelector("#changeUserStatusBtn").addEventListener("click", () => {
     });
   }
 });
-document.querySelector("#changeStatusBtn").addEventListener("#click", () => {
+document.querySelector("#changeStatusBtn").addEventListener("click", () => {
   // Load Users
   userModel.init();
 
@@ -139,8 +153,14 @@ document.querySelector("#changeStatusBtn").addEventListener("#click", () => {
         userModel.users[user].status === "normal" ? "blocked" : "normal";
       userModel.users[user].status = result;
 
+      // update LocalStorage
+      localStorage.users = JSON.stringify(userModel.users);
+
       // update the info in the modal
       document.querySelector("#statusInfo").innerText = `Status: ${result}`;
+      setTimeout(() => {
+        location.href = "../html/admin.html";
+      }, 1000);
       return;
     }
   }
@@ -193,6 +213,8 @@ document.querySelector("#modifyUserBtn").addEventListener("click", () => {
           document.querySelector("#modifyPassword").value =
             userModel.users[user].password;
 
+          document.querySelector("#modifySelectType").value =
+            userModel.users[user].type;
           break;
         }
       }
@@ -241,13 +263,20 @@ document.querySelector("#modifyUserBtn").addEventListener("click", () => {
           userModel.users[user].locality = document.querySelector(
             "#modifySelectLocality"
           ).value;
+          userModel.users[user].type =
+            document.querySelector("#modifySelectType").value;
 
           //Update LocalStorage
 
           localStorage.users = JSON.stringify(userModel.users);
 
-          return (document.querySelector("#modifySuccessMsg").innerText =
-            "New Data has been applied");
+          document.querySelector("#modifySuccessMsg").innerText =
+            "New Data has been applied";
+
+          setTimeout(() => {
+            location.href = "../html/admin.html";
+          }, 1000);
+          return;
         }
       }
     });
