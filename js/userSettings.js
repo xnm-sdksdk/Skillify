@@ -1,8 +1,8 @@
 import * as userModel from "./models/userModel.js";
 
-/* if (!userModel.isLogged()) {
+if (!userModel.isLogged()) {
   window.open("../html/logIn.html", "_self");
-} */
+}
 
 // GET USER LOGGED IN (AS AN OBJECT)
 const currentUser = userModel.getUserLogged();
