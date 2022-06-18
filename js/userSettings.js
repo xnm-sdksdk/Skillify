@@ -15,9 +15,7 @@ document.querySelector("#dateInput").value = currentUser.dateOfBirth;
 document.querySelector("#genderInput").value = currentUser.gender;
 document.querySelector("#localityInput").value = currentUser.locality;
 document.querySelector("#avatarInput").value =
-  currentUser.avatar == "../../imgs/main/user.png"
-    ? "Default"
-    : currentUser.avatar;
+  currentUser.avatar == "../../imgs/main/user.png" ? "" : currentUser.avatar;
 
 // ADD EVENT TO BACK BUTTON
 document.querySelector("#backBtn").addEventListener("click", () => {
@@ -73,7 +71,7 @@ document.querySelector("form").addEventListener("submit", (event) => {
         document.querySelector("#localityInput").value;
 
       userModel.users[user].avatar =
-        document.querySelector("#avatarInput").value == "Default"
+        document.querySelector("#avatarInput").value == ""
           ? "../../imgs/main/user.png"
           : document.querySelector("#avatarInput").value;
 
@@ -85,7 +83,7 @@ document.querySelector("form").addEventListener("submit", (event) => {
       currentUser.gender = document.querySelector("#genderInput").value;
       currentUser.locality = document.querySelector("#localityInput").value;
       currentUser.avatar =
-        document.querySelector("#avatarInput").value == "Default"
+        document.querySelector("#avatarInput").value == ""
           ? "../../imgs/main/user.png"
           : document.querySelector("#avatarInput").value;
 
