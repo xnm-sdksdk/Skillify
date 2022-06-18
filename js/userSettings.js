@@ -7,6 +7,19 @@ if (!userModel.isLogged()) {
 // GET USER LOGGED IN (AS AN OBJECT)
 const currentUser = userModel.getUserLogged();
 
+// ADD ADMIN BUTTON
+document.querySelector("#btnsSection").innerHTML +=
+  currentUser.type === "admin"
+    ? `
+<button type="button" class="btn text-white" id="adminBtn">Admin Settings</button>
+<button type="submit" class="btn text-white">Apply</button>
+<button type="button" class="btn text-white" id="backBtn">Back</button>
+`
+    : `
+<button type="button" class="btn text-white" id="adminBtn">Admin Settings</button>
+<button type="submit" class="btn text-white">Apply</button>
+`;
+
 // INJECT USER DATA INTO HTML ELEMENTS
 document.querySelector("#nameInput").value = currentUser.name;
 document.querySelector("#emailInput").value = currentUser.email;
@@ -20,6 +33,11 @@ document.querySelector("#avatarInput").value =
 // ADD EVENT TO BACK BUTTON
 document.querySelector("#backBtn").addEventListener("click", () => {
   window.open("../html/userprofile.html", "_self");
+});
+
+// ADD EVENT TO ADMIN SETTINGS BUTTON
+document.querySelector("#adminBtn")?.addEventListener("click", () => {
+  window.open("../html/admin.html", "_self");
 });
 
 // SHOW PASSWORD BUTTON

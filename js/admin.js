@@ -9,6 +9,11 @@ if (userModel.getUserLogged().type != "admin") {
   window.open("../html/userprofile.html", "_self");
 }
 
+// ADD EVENT TO BACK BUTTON
+document.querySelector("#backToSettingsBtn").addEventListener("click", () => {
+  window.open("../html/userSettings.html", "_self");
+});
+
 /* MANAGE USERS */
 
 // ADD NEW USER
