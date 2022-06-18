@@ -26,7 +26,7 @@ document.querySelector("#login").addEventListener("submit", (event) => {
 
     //wait 1second to load next page
     setTimeout(() => {
-      location.href = "../html/index.html";
+      location.href = "../html/userprofile.html";
     }, 1000);
     return;
   }
