@@ -46,6 +46,7 @@ document.querySelector("#showPwBtn").addEventListener("click", () => {
 document.querySelector("form").addEventListener("submit", (event) => {
   event.preventDefault();
 
+  // clear success message
   document.querySelector("#successMsg").innerHTML = "";
 
   // Load Users
