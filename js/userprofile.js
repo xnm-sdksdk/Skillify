@@ -12,10 +12,15 @@ document.querySelector("#profile-pic").src = currentUser.avatar;
 document.querySelector("#profile-pic").alt = "../imgs/main/user.png";
 
 // Update name
-document.querySelector("h3").innerText = currentUser.name;
+document.querySelector("h3").innerText = currentUser.username;
 
 // Update Description
-document.querySelector("p").innerText = currentUser.type;
+document.querySelector("p").innerText = `
+  ID: ${currentUser.id}
+  NAME: ${currentUser.name}
+  TYPE: ${currentUser.type}
+  STATUS: ${currentUser.status}
+`;
 
 // SETTINGS (modal)
 document.querySelector("#editProfileBtn").addEventListener("click", () => {
