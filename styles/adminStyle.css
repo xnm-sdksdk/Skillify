@@ -19,7 +19,7 @@ body {
 }
 
 .btn {
-  background-color: var(--six-color);
+  background-color: var(--fourth-color);
   flex: 0 1 400px;
   margin: 10px;
   transition: 1s;

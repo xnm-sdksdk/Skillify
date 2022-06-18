@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+
+    <!-- Custom CSS (same used in admin.html) -->
+    <link rel="stylesheet" href="../styles/adminStyle.css" />
+
+    <title>User Settings</title>
+  </head>
+  <body>
+    <div
+      class="container d-fex align-items-center justify-content-center col-lg-sm-xs-8"
+    >
+      <h1 class="p-5 text-center">Settings</h1>
+
+      <div class="row">
+        <div class="col-sm-3"></div>
+        <form class="col-sm-6">
+          <!-- Name -->
+          <div class="form-group p-1">
+            <label for="nameInput">Name</label>
+            <input type="text" class="form-control" id="nameInput" required />
+          </div>
+
+          <!-- Email -->
+          <div class="form-group p-1">
+            <label for="emailInput">Email</label>
+            <input type="email" class="form-control" id="emailInput" required />
+          </div>
+          <!-- Password -->
+          <div class="form-group p-1">
+            <label for="pwInput">Password</label>
+            <input type="password" class="form-control" id="pwInput" required />
+
+            <!-- Show Password -->
+            <input type="checkbox" class="form-check-input" id="showPwBtn" />
+            <label class="form-check-label" for="showPwBtn"
+              >Show Password</label
+            >
+          </div>
+          <!-- Date of Birth -->
+          <div class="form-group p-1">
+            <label for="dateInput">Date of Birth</label>
+            <input type="date" class="form-control" id="dateInput" required />
+          </div>
+          <!-- Gender -->
+          <div class="form-group p-1">
+            <label for="genderInput">Gender</label>
+            <select id="genderInput" class="form-control">
+              <option value="Masculine">Masculine</option>
+              <option value="Feminine">Feminine</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+          <!-- Location -->
+          <div class="form-group p-1">
+            <label for="localityInput">Locality</label>
+            <select id="localityInput" class="form-control">
+              <option value="Aveiro">Aveiro</option>
+              <option value="Beja">Beja</option>
+              <option value="Braga">Braga</option>
+              <option value="Bragança">Bragança</option>
+              <option value="Castelo_Branco">Castelo Branco</option>
+              <option value="Coimbra">Coimbra</option>
+              <option value="Evora">Évora</option>
+              <option value="Faro">Faro</option>
+              <option value="Guarda">Guarda</option>
+              <option value="Leiria">Leiria</option>
+              <option value="Lisboa">Lisboa</option>
+              <option value="Portalegre">Portalegre</option>
+              <option value="Porto">Porto</option>
+              <option value="Santarem">Santarém</option>
+              <option value="Setubal">Sétubal</option>
+              <option value="Viana_do_Castelo">Viana do Castelo</option>
+              <option value="Vila_Real">Vila Real</option>
+              <option value="Viseu">Viseu</option>
+              <option value="Viseu">Other</option>
+            </select>
+          </div>
+
+          <div class="form-group p-1">
+            <label for="">Custom Profile Picture</label>
+            <input
+              type="url"
+              class="form-control"
+              id="avatarInput"
+              placeholder="Image URL"
+            />
+          </div>
+
+          <!-- Buttons (Apply and Back) -->
+          <div class="row">
+            <div class="col-3"></div>
+            <div class="col-6">
+              <div class="d-grid p-2">
+                <p class="text-success h6 text-center" id="successMsg"></p>
+
+                <button type="submit" class="btn text-white">Apply</button>
+                <button type="button" class="btn text-white" id="backBtn">
+                  Back
+                </button>
+              </div>
+            </div>
+            <div class="col-3"></div>
+          </div>
+        </form>
+        <div class="col-sm-3"></div>
+      </div>
+    </div>
+
+    <!-- BOOTSTRAP JS SCRIPT -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+
+    <script type="module" src="../js/userSettings.js"></script>
+  </body>
+</html>

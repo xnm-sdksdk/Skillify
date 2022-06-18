@@ -243,7 +243,8 @@ document.querySelector("#modifyUserBtn").addEventListener("click", () => {
           ).value;
 
           //Update LocalStorage
-          localStorage.users = userModel.users;
+
+          localStorage.users = JSON.stringify(userModel.users);
 
           return (document.querySelector("#modifySuccessMsg").innerText =
             "New Data has been applied");
