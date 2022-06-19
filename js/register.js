@@ -45,19 +45,19 @@ document.querySelector("#createAccount").addEventListener("submit", (event) => {
     return;
   }
   // if there's already a user with this name
-  if (
-    userModel.users.some(
-      (user) =>
-        user[document.querySelector("#signUserName").value] ===
-        document.querySelector("#signUserName").value
-    )
-  ) {
-    setInputError(
-      document.querySelector("#signUserName"),
-      "This Username already exists!"
-    );
-    return;
+  for (let user in userModel.users) {
+    if (
+      userModel.users[user].username ===
+      document.querySelector("#signUserName").value
+    ) {
+      setInputError(
+        document.querySelector("#signUserName"),
+        "This Username already exists!"
+      );
+      return;
+    }
   }
+
   // if the passwords don't match
   if (
     document.querySelector("#signPassword").value !==
@@ -91,17 +91,17 @@ document.querySelector("#createAccount").addEventListener("submit", (event) => {
   }
 
   // CREATE ACCOUNT
-  const gender = document.querySelector("#genderSelect").value;
-  const locality = document.querySelector("#selectLocality").value;
+  let gender = document.querySelector("#genderSelect").value;
+  let locality = document.querySelector("#selectLocality").value;
 
   //if the user hasn't chosen a gender
   if (gender === "Gender") {
-    gender = "UNKNOWN";
+    gender = "Other";
   }
 
   //if the user hasn't chosen a locality
   if (locality === "Locality") {
-    locality = "UNKNOWN";
+    locality = "Other";
   }
 
   userModel.addNewUser(
