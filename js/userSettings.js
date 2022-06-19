@@ -16,8 +16,8 @@ document.querySelector("#btnsSection").innerHTML +=
 <button type="button" class="btn text-white" id="backBtn">Back</button>
 `
     : `
-<button type="button" class="btn text-white" id="adminBtn">Admin Settings</button>
 <button type="submit" class="btn text-white">Apply</button>
+<button type="button" class="btn text-white" id="backBtn">Back</button>
 `;
 
 // INJECT USER DATA INTO HTML ELEMENTS
