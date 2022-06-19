@@ -119,4 +119,8 @@ document.querySelector("#createAccount").addEventListener("submit", (event) => {
     "success",
     "Account Created Successfully!"
   );
+
+  setTimeout(() => {
+    location.href = "../html/logIn.html";
+  }, 1000);
 });
