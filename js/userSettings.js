@@ -67,6 +67,9 @@ document.querySelector("form").addEventListener("submit", (event) => {
   // clear success message
   document.querySelector("#successMsg").innerText = "";
 
+  if (currentUser.username === "admin")
+    return alert("You can not change settings in this account!");
+
   // Load Users
   userModel.init();
 

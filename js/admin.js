@@ -123,9 +123,13 @@ document.querySelector("#changeUserStatusBtn").addEventListener("click", () => {
 
   // Add Users to Select List
   for (let user in userModel.users) {
-    document.querySelector("#selectUser").innerHTML += `
+    if (userModel.users.username === "admin") {
+      continue;
+    } else {
+      document.querySelector("#selectUser").innerHTML += `
         <option class="changeStatusOption" value="${userModel.users[user].username}">${userModel.users[user].username}</option>
     `;
+    }
   }
 
   // add event on click when choosing an option (show user status)
@@ -190,9 +194,13 @@ document.querySelector("#modifyUserBtn").addEventListener("click", () => {
 
   // Add Users to Select List
   for (let user in userModel.users) {
-    document.querySelector("#modifySelectUser").innerHTML += `
+    if (userModel.users[user].username === "admin") {
+      continue;
+    } else {
+      document.querySelector("#modifySelectUser").innerHTML += `
         <option class="modifyUserOption" value="${userModel.users[user].username}">${userModel.users[user].username}</option>
     `;
+    }
   }
 
   // add event on click when choosing an option (show user info)

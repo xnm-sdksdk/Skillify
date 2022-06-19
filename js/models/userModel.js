@@ -68,7 +68,27 @@ export class User {
 // LOAD USERS FROM LOCAL STORAGE
 export let users;
 export function init() {
-  users = localStorage.users ? JSON.parse(localStorage.users) : [];
+  users = localStorage.users
+    ? JSON.parse(localStorage.users)
+    : [
+        {
+          id: 1,
+          name: "Admin Account",
+          username: "admin",
+          dateOfBirth: "2002-11-10",
+          gender: "Other",
+          email: "admin@gmail.com",
+          locality: "Porto",
+          password: "admin",
+          type: "admin",
+          courses: [],
+          levels: [],
+          achievements: [],
+          badges: [],
+          status: "normal",
+          avatar: "../../imgs/userprofile_imgs/adminPic.png",
+        },
+      ];
 }
 
 // GET NEXT NEW ID
