@@ -18,47 +18,6 @@ class Course {
     this.likes = 0;
   }
 
-  //* GETS AND SETS
-  // title
-  get title() {
-    return this.title;
-  }
-  set title(title) {
-    this.title = title;
-  }
-
-  // description
-  get description() {
-    return this.description;
-  }
-  set description(description) {
-    this.description = description;
-  }
-
-  // starting button text
-  get btnDescription() {
-    return this.btnDescription;
-  }
-  set btnDescription(newText) {
-    this.btnDescription = newText;
-  }
-
-  // initial video
-  get initialVideo() {
-    return this.initialVideo;
-  }
-  set initialVideo(video) {
-    this.initialVideo = video;
-  }
-
-  // chapters
-  get chapters() {
-    return this.chapters;
-  }
-  set chapters(chapters) {
-    this.chapters = chapters;
-  }
-
   //* METHODS
   // add new chapter
   addChapter(chapter) {
@@ -184,4 +143,19 @@ export function addCourse(
     );
     localStorage.courses = JSON.stringify(courses);
   }
+}
+
+// SET CURRENT COURSE
+export function setCurrentCourse(courseName) {
+  sessionStorage.currentCourse = courseName;
+}
+
+// CHECK IF THERE'S A CURRENT COURSE
+export function checkCurrentCourse() {
+  return sessionStorage.currentCourse ? true : false;
+}
+
+// GET CURRENT COURSE
+export function getCurrentCourse() {
+  return sessionStorage.currentCourse;
 }
