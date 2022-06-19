@@ -176,7 +176,7 @@ document.querySelector("#changeStatusBtn").addEventListener("click", () => {
       document.querySelector("#statusInfo").innerText = `Status: ${result}`;
       setTimeout(() => {
         location.href = "../html/admin.html";
-      }, 1000);
+      }, 200);
       return;
     }
   }
@@ -302,7 +302,7 @@ document.querySelector("#modifyUserBtn").addEventListener("click", () => {
 
           setTimeout(() => {
             location.href = "../html/admin.html";
-          }, 1000);
+          }, 200);
           return;
         }
       }
