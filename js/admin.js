@@ -123,7 +123,7 @@ document.querySelector("#changeUserStatusBtn").addEventListener("click", () => {
 
   // Add Users to Select List
   for (let user in userModel.users) {
-    if (userModel.users.username === "admin") {
+    if (userModel.users[user].username === "admin") {
       continue;
     } else {
       document.querySelector("#selectUser").innerHTML += `
@@ -154,6 +154,8 @@ document.querySelector("#changeUserStatusBtn").addEventListener("click", () => {
   }
 });
 document.querySelector("#changeStatusBtn").addEventListener("click", () => {
+  if (document.querySelector("#selectUser").value === "Users") return;
+
   // Load Users
   userModel.init();
 
@@ -245,6 +247,8 @@ document.querySelector("#modifyUserBtn").addEventListener("click", () => {
 
     // Add Event on click to Apply Button
     document.querySelector("#ApplyChangesBtn").addEventListener("click", () => {
+      if (document.querySelector("#modifySelectUser").value === "Users") return;
+
       // get username being modified
       const userMod = document.querySelector("#modifySelectUser").value;
 
