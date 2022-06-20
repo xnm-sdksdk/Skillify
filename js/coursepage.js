@@ -6,7 +6,8 @@ userModel.init();
 
 const selectedCourse = {
   title: "Nome do curso",
-  description: "Very Nice yes",
+  description:
+    "Soft skills are personality traits and behaviors that will help candidates get hired and succeed in their work. Unlike technical skills or “hard” skills, soft skills are interpersonal and behavioral skills that help you work well with other people and develop your career. In this article, learn about soft skills, how they’re different from hard skills and the best soft skills to get hired and find long-term success. ",
   btnDescription: "Begin Course",
   initialVideo: "../videos/SkillifyPromoFinal.mp4",
   chapters: [],

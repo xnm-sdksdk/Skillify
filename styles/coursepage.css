@@ -32,9 +32,17 @@ h3 {
   color: #fff;
 }
 
+h4 {
+  color: #fff;
+  background-color: var(--third-color);
+
+  border-radius: 20px;
+}
+
 video {
   width: 100%;
   height: auto;
+  border: 8px double var(--six-color);
 }
 
 .btn {
