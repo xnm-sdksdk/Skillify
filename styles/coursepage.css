@@ -11,6 +11,10 @@ body {
   background-color: var(--primary-color);
 }
 
+.container {
+  background-color: var(--second-color);
+}
+
 * {
   margin: 0;
   padding: 0;

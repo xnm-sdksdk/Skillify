@@ -97,7 +97,6 @@ const renderComments = (n = selectedCourse.comments.length - 5) => {
         <button 
           type="submit"
           class="btn btn-primary" 
-          id="addCommentBtn"
         >Comment</button>
         </div>
         </form>
