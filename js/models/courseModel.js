@@ -145,11 +145,6 @@ export function addCourse(
   }
 }
 
-// SET SELECTED COURSE
-export function setSelectedCourse(courseName) {
-  sessionStorage.selectedCourse = courseName;
-}
-
 // CHECK IF THERE'S A SELECTED COURSE
 export function checkSelectedCourse() {
   return sessionStorage.selectedCourse ? true : false;
@@ -157,5 +152,15 @@ export function checkSelectedCourse() {
 
 // GET SELECTED COURSE
 export function getSelectedCourse() {
-  return sessionStorage.selectedCourse;
+  return JSON.parse(sessionStorage.selectedCourse);
+}
+
+// SET SELECTED COURSE
+export function setSelectedCourse(name) {
+  for (let course in courses) {
+    if (courses[course].title == name) {
+      sessionStorage.selectedCourse = JSON.stringify(course);
+      break;
+    }
+  }
 }
