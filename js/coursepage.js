@@ -85,19 +85,22 @@ const renderComments = (n = selectedCourse.comments.length - 5) => {
   // ADD COMMENT BUTTON
   if (userModel.isLogged() && userModel.getUserLogged().status !== "blocked") {
     document.querySelector("#commentSection").innerHTML += `
+    <form id="addCommentForm">
     <div class="d-flex flex-row add-comment-section mt-4 mb-4">
-      <input
-        type="text"
-        class="form-control mr-3"
-        id="newCommentText"
-        placeholder="Add comment"
-      />
-      <button 
-        type="button"
-        class="btn btn-primary" 
-        id="addCommentBtn"
-      >Comment</button>
-    </div>
+        <input
+          type="text"
+          class="form-control mr-3"
+          id="newCommentText"
+          placeholder="Add comment"
+          required
+        />
+        <button 
+          type="submit"
+          class="btn btn-primary" 
+          id="addCommentBtn"
+        >Comment</button>
+        </div>
+        </form>
     `;
   }
 
@@ -154,32 +157,35 @@ const renderComments = (n = selectedCourse.comments.length - 5) => {
       renderComments();
     });
 
-  document.querySelector("#addCommentBtn").addEventListener("click", () => {
-    // add comment to selected course
-    selectedCourse.comments.push({
-      username: userModel.getUserLogged().username,
-      text: document.querySelector("#newCommentText").value,
-    });
+  document
+    .querySelector("#addCommentForm")
+    .addEventListener("submit", (event) => {
+      event.preventDefault();
+      // add comment to selected course
+      selectedCourse.comments.push({
+        username: userModel.getUserLogged().username,
+        text: document.querySelector("#newCommentText").value,
+      });
 
-    // add comment to courses in LocalStorage
-    for (let course in courseModel.courses) {
-      if (courseModel.courses[course].title === selectedCourse.title) {
-        courseModel.courses[course].comments.push({
-          username: userModel.getUserLogged().username,
-          text: document.querySelector("#newCommentText").value,
-        });
+      // add comment to courses in LocalStorage
+      for (let course in courseModel.courses) {
+        if (courseModel.courses[course].title === selectedCourse.title) {
+          courseModel.courses[course].comments.push({
+            username: userModel.getUserLogged().username,
+            text: document.querySelector("#newCommentText").value,
+          });
 
-        // save to LocalStorage
-        localStorage.courses = JSON.stringify(courseModel.courses);
+          // save to LocalStorage
+          localStorage.courses = JSON.stringify(courseModel.courses);
+        }
       }
-    }
 
-    if (document.querySelector("#loadAllCommentsBtn")) {
-      renderComments();
-    } else {
-      renderComments(0);
-    }
-  });
+      if (document.querySelector("#loadAllCommentsBtn")) {
+        renderComments();
+      } else {
+        renderComments(0);
+      }
+    });
 };
 
 // CALL FUNCTION TO RENDER COMMENTS SECTION (only 5comments)
