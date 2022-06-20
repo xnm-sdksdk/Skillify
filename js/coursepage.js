@@ -82,6 +82,25 @@ const renderComments = (n = selectedCourse.comments.length - 5) => {
   // clear comments
   document.querySelector("#commentSection").innerHTML = "";
 
+  // ADD COMMENT BUTTON
+  if (userModel.isLogged() && userModel.getUserLogged().status !== "blocked") {
+    document.querySelector("#commentSection").innerHTML += `
+    <div class="d-flex flex-row add-comment-section mt-4 mb-4">
+      <input
+        type="text"
+        class="form-control mr-3"
+        id="newCommentText"
+        placeholder="Add comment"
+      />
+      <button 
+        type="button"
+        class="btn btn-primary" 
+        id="addCommentBtn"
+      >Comment</button>
+    </div>
+    `;
+  }
+
   // In order to show the comments from newer to older (an ordinary for loop was used)
   for (let i = selectedCourse.comments.length - 1; i >= n; i--) {
     document.querySelector("#commentSection").innerHTML += `
@@ -104,7 +123,7 @@ const renderComments = (n = selectedCourse.comments.length - 5) => {
           `;
   }
 
-  // Load/Reduce comments button
+  // LOAD/REDUCE COMMENTS BUTTON
   document.querySelector("#commentSection").innerHTML +=
     n == selectedCourse.comments.length - 5
       ? `
@@ -134,6 +153,33 @@ const renderComments = (n = selectedCourse.comments.length - 5) => {
     ?.addEventListener("click", () => {
       renderComments();
     });
+
+  document.querySelector("#addCommentBtn").addEventListener("click", () => {
+    // add comment to selected course
+    selectedCourse.comments.push({
+      username: userModel.getUserLogged().username,
+      text: document.querySelector("#newCommentText").value,
+    });
+
+    // add comment to courses in LocalStorage
+    for (let course in courseModel.courses) {
+      if (courseModel.courses[course].title === selectedCourse.title) {
+        courseModel.courses[course].comments.push({
+          username: userModel.getUserLogged().username,
+          text: document.querySelector("#newCommentText").value,
+        });
+
+        // save to LocalStorage
+        localStorage.courses = JSON.stringify(courseModel.courses);
+      }
+    }
+
+    if (document.querySelector("#loadAllCommentsBtn")) {
+      renderComments();
+    } else {
+      renderComments(0);
+    }
+  });
 };
 
 // CALL FUNCTION TO RENDER COMMENTS SECTION (only 5comments)

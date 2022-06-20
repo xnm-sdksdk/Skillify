@@ -77,3 +77,7 @@ video {
     transform: scale(1);
   }
 }
+
+.btn {
+  background: var(--fourth-color);
+}

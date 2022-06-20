@@ -48,7 +48,7 @@ class Course {
 }
 
 // LOAD COURSES FROM LOCAL STORAGE
-let courses;
+export let courses;
 export function init() {
   // if there's no course, it will create the initial 10 courses
   courses = localStorage.courses
@@ -145,17 +145,17 @@ export function addCourse(
   }
 }
 
-// SET CURRENT COURSE
-export function setCurrentCourse(courseName) {
-  sessionStorage.currentCourse = courseName;
+// SET SELECTED COURSE
+export function setSelectedCourse(courseName) {
+  sessionStorage.selectedCourse = courseName;
 }
 
-// CHECK IF THERE'S A CURRENT COURSE
-export function checkCurrentCourse() {
-  return sessionStorage.currentCourse ? true : false;
+// CHECK IF THERE'S A SELECTED COURSE
+export function checkSelectedCourse() {
+  return sessionStorage.selectedCourse ? true : false;
 }
 
-// GET CURRENT COURSE
-export function getCurrentCourse() {
-  return sessionStorage.currentCourse;
+// GET SELECTED COURSE
+export function getSelectedCourse() {
+  return sessionStorage.selectedCourse;
 }
