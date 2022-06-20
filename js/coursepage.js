@@ -69,14 +69,6 @@ document.querySelector("#videoLocation").innerHTML = `
       </video>
   `;
 
-/* Like Button */
-$(function () {
-  $(document).one("click", ".like-review", function (e) {
-    $(this).html('<i class="like-button" aria-hidden="true"></i> Liked!');
-    $(this).children(".fa-heart").addClass("animate-like");
-  });
-});
-
 // COMMENTS SECTION
 
 const renderComments = (n = selectedCourse.comments.length - 5) => {
