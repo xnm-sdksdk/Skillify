@@ -48,3 +48,83 @@ video {
 .btn {
   background: var(--fourth-color);
 }
+
+/* Like Button */
+.like-button {
+  position: relative;
+  display: block;
+  margin: -115px auto 0px;
+  right: 30%;
+  width: 70px;
+  height: 40px;
+  background-color: var(--fourth-color);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: width 0.5s, border-radius 0.5s;
+  transition: 0.3s ease;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  font-size: 18px;
+  text-align: center;
+}
+
+.like-button * {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.25s;
+}
+
+.icon {
+  opacity: 0;
+}
+
+.like-button:focus {
+  width: 50px;
+  height: 50px;
+  background-color: #44c08a;
+  border-radius: 50%;
+}
+
+.like-button:focus .text {
+  opacity: 0;
+}
+
+.like-button:focus .icon {
+  opacity: 1;
+  transition-delay: 0.5s;
+}
+
+.like .like-button:hover {
+  transform: translateY(-6px);
+}
+
+/* Start button */
+.start-button {
+  position: relative;
+  display: block;
+  left: 20%;
+  margin: -40px auto 0px;
+  width: 180px;
+  height: 40px;
+  background-color: var(--fourth-color);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: width 0.5s, border-radius 0.5s;
+  transition: 0.3s ease;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  font-size: 18px;
+  text-align: center;
+}
+
+.start-button:hover {
+  background-color: #44c08a;
+}
+
+.start .start-button:hover {
+  transform: translateY(-6px);
+}
