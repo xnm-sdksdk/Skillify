@@ -182,3 +182,8 @@ const renderComments = (n = selectedCourse.comments.length - 5) => {
 
 // CALL FUNCTION TO RENDER COMMENTS SECTION (only 5comments)
 renderComments();
+
+// ADD EVENT TO START COURSE BUTTON
+document.querySelector("#startCourseBtn").addEventListener("click", () => {
+  window.open("../html/courseContent.html", "_self");
+});

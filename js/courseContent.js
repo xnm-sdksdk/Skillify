@@ -5,13 +5,13 @@ userModel.init();
 courseModel.init();
 
 //TODO un-comment after finishing
-/* if (!userModel.isLogged()) {
+if (!userModel.isLogged()) {
   window.open("../html/logIn.html", "_self");
-} */
+}
 
-/* const currentUser = userModel.getUserLogged(); */
+const currentUser = userModel.getUserLogged();
 
-//! HARD CODED COURSE FOR TESTS
+/* //! HARD CODED COURSE FOR TESTS
 const currentUser = {
   id: 1,
   name: "Tiago",
@@ -19,7 +19,7 @@ const currentUser = {
   type: "admin",
   status: "normal",
   courses: [],
-};
+}; */
 
 //! HARD CODED COURSE FOR TESTS
 const selectedCourse = {
