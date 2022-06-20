@@ -26,3 +26,66 @@ document.querySelector("p").innerText = `
 document.querySelector("#editProfileBtn").addEventListener("click", () => {
   window.open("../html/userSettings.html", "_self");
 });
+
+// SHOW COURSES
+document.querySelector("#courseListBtn").addEventListener("click", () => {
+  $("#courseListModal").modal({ show: true });
+
+  if (currentUser.courses.length == 0) {
+    document.querySelector("table").innerHTML = `
+    <tr>
+      <th></th>
+      <th>You're not subscribed to any course.</th>
+      <th></th>
+    </tr>
+    `;
+    return;
+  }
+
+  document.querySelector("table").innerHTML = `
+  <tr>
+    <th>COURSE</th>
+    <th>STATUS</th>
+    <th>OPTIONS</th>
+  </tr>
+  `;
+
+  for (let course in currentUser.courses) {
+    document.querySelector("table").innerHTML += `
+      <tr class="text-center">
+        <td>
+          ${currentUser.courses[course].title}
+        </td>
+        <td>
+          ${currentUser.courses[course].status}
+        </td>
+        <td>
+          <button type="btn" class="openCourseBtn">
+            Open
+          </button>
+        </td>
+      </tr>
+    `;
+  }
+
+  const btns = document.querySelectorAll(".openCourseBtn");
+
+  for (let btn of btns) {
+    btn.addEventListener("click", function () {
+      const courseTitle =
+        this.parentNode.previousSibling.previousSibling.previousSibling
+          .previousSibling.innerHTML;
+
+      for (let course in coursesModel.courses) {
+        if (coursesModel.courses[course] === courseTitle) {
+          sessionStorage.selectedCourse = JSON.stringify(
+            coursesModel.courses[course]
+          );
+          break;
+        }
+      }
+
+      window.open("../html/coursepage.html", "_self");
+    });
+  }
+});

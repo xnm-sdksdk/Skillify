@@ -64,7 +64,7 @@ document.querySelector("h1").innerText = selectedCourse.title;
 document.querySelector("h4").innerText = selectedCourse.description;
 
 document.querySelector("#videoLocation").innerHTML = `
-      <video width="720" height="405" controls>
+      <video controls>
           <source src=${selectedCourse.initialVideo} type="video/mp4" />
       </video>
   `;

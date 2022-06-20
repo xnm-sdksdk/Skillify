@@ -1,0 +1,120 @@
+:root {
+  --primary-color: #f45ea0;
+  --second-color: #b555a1;
+  --third-color: #9051a2;
+  --fourth-color: #674ba2;
+  --fifth-color: #4b48a3;
+  --six-color: #2943a3;
+}
+
+body {
+  background-color: var(--primary-color);
+}
+
+.container {
+  background-color: var(--second-color);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Adelle Mono", Flex-Bold;
+}
+
+h1 {
+  font-size: 45px;
+  color: #fff;
+  padding: 20px;
+}
+
+#courseContent {
+  background-color: #fff;
+  border: 5px double var(--six-color);
+}
+
+.card {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: var(--fourth-color);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.btn {
+  background-color: var(--six-color);
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
+}
+
+video {
+  width: 100%;
+  height: auto;
+  border: 8px double var(--six-color);
+}
+
+#showExercisesBtn {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+/* EXERCISES SECTION */
+.exercise {
+  background-color: var(--second-color);
+  border: 5px double var(--six-color);
+  border-radius: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#question {
+  margin-top: 20px;
+}
+
+label.box {
+  display: flex;
+  margin-top: 10px;
+  padding: 10px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 1px solid #ddd;
+}
+.one:checked ~ label.first,
+.two:checked ~ label.second,
+.three:checked ~ label.third,
+.four:checked ~ label.forth,
+.five:checked ~ label.fifth,
+.six:checked ~ label.sixth,
+.seven:checked ~ label.seveth,
+.eight:checked ~ label.eighth {
+  border-color: 0.8498ee;
+}
+.one:checked ~ label.first .circle,
+.two:checked ~ label.second .circle,
+.three:checked ~ label.third .circle,
+.four:checked ~ label.forth .circle,
+.five:checked ~ label.fifth .circle,
+.six:checked ~ label.sixth .circle,
+.seven:checked ~ label.seveth .circle,
+.eight:checked ~ label.eighth .circle {
+  border: 6px solid #8e498e;
+  background-color: #fff;
+}
+label.box:hover {
+  background: #d5bbf7;
+}
+
+label.box .circle {
+  height: 22px;
+  width: 22px;
+  border-radius: 50%;
+  margin-right: 15px;
+  border: 2px solid #ddd;
+  display: inline-block;
+}
+input[type="radio"] {
+  display: none;
+}
+
+#submitAnswers {
+  margin-top: 10px;
+  margin-bottom: 25px;
+}

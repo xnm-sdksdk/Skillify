@@ -34,7 +34,39 @@
         <button type="button" id="editProfileBtn">Edit Profile</button>
         <div class="profile-bottom">
           <p>Enroled Courses</p>
-          <img src="../imgs/userprofile_imgs/arrow.png" />
+          <img src="../imgs/userprofile_imgs/arrow.png" id="courseListBtn" />
+        </div>
+      </div>
+    </div>
+
+    <!-- MODALS -->
+    <div class="modal fade" id="courseListModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header justify-content-center">
+            <h5 class="modal-title">Subscribed Courses</h5>
+          </div>
+
+          <section class="text-center">
+            <table class="table">
+              <tr>
+                <th>COURSE</th>
+                <th>STATUS</th>
+                <th>OPTIONS</th>
+              </tr>
+            </table>
+          </section>
+
+          <div class="modal-footer justify-content-center">
+            <!-- CLOSE MODAL BUTTON -->
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
         </div>
       </div>
     </div>
