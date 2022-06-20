@@ -151,7 +151,7 @@ const renderComments = (n = selectedCourse.comments.length - 5) => {
 
   document
     .querySelector("#addCommentForm")
-    .addEventListener("submit", (event) => {
+    ?.addEventListener("submit", (event) => {
       event.preventDefault();
       // add comment to selected course
       selectedCourse.comments.push({
