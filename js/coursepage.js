@@ -6,58 +6,6 @@ userModel.init();
 
 const selectedCourse = courseModel.getSelectedCourse();
 
-/* const selectedCourse = {
-  title: "Nome do curso",
-  description:
-    "Soft skills are personality traits and behaviors that will help candidates get hired and succeed in their work. Unlike technical skills or “hard” skills, soft skills are interpersonal and behavioral skills that help you work well with other people and develop your career. In this article, learn about soft skills, how they’re different from hard skills and the best soft skills to get hired and find long-term success. ",
-  btnDescription: "Begin Course",
-  initialVideo: "../videos/SkillifyPromoFinal.mp4",
-  chapters: [],
-  comments: [
-    {
-      username: "TiagoRibeiro.25",
-      text: "Curso muito bom!",
-    },
-    {
-      username: "Desconhecido",
-      text: "MELHOR CURSO!!!",
-    },
-    {
-      username: "Vizinho",
-      text: "Random comment",
-    },
-    {
-      username: "Tkinter Enjoyer",
-      text: "Prefiro python smh",
-    },
-    {
-      username: "Joaquim",
-      text: "kinda cool ngl",
-    },
-    {
-      username: "random user on the internet",
-      text: "ok",
-    },
-    {
-      username: "vscode hater",
-      text: "YOOO!",
-    },
-    {
-      username: "Garfield",
-      text: "SKILLIFY 💪",
-    },
-    {
-      username: "USER",
-      text: "TOP!",
-    },
-    {
-      username: "Não sei",
-      text: "ta bom",
-    },
-  ],
-  likes: 0,
-}; */
-
 document.querySelector("title").innerText =
   selectedCourse.title + " - Skillify";
 
@@ -67,7 +15,7 @@ document.querySelector("h4").innerText = selectedCourse.description;
 
 document.querySelector("#videoLocation").innerHTML = `
       <video controls>
-          <source src=${selectedCourse.initialVideo} type="video/mp4" />
+          <source src="${selectedCourse.initialVideo}" type="video/mp4" />
       </video>
   `;
 

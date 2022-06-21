@@ -10,63 +10,7 @@ if (!userModel.isLogged()) {
 
 const currentUser = userModel.getUserLogged();
 
-/* //! HARD CODED COURSE FOR TESTS
-const currentUser = {
-  id: 1,
-  name: "Tiago",
-  username: "TiagoRibeiro.25",
-  type: "admin",
-  status: "normal",
-  courses: [],
-}; */
-
-/* const selectedCourse = courseModel.getSelectedCourse() */
-
-//! HARD CODED COURSE FOR TESTS
-const selectedCourse = {
-  title: "Nome do curso",
-  chapters: [
-    {
-      title: "Chapter I",
-      video: "../videos/SkillifyPromoFinal.mp4",
-      exercises: [
-        {
-          number: 1,
-          question: "Click in the option PORTUGAL",
-          options: ["ESPANHA", "PORTUGAL", "FRANÇA", "ALEMANHA"],
-          correct: "PORTUGAL",
-        },
-        {
-          number: 2,
-          question: "Click in the option Tiago",
-          options: ["Tiago", "Daniel", "Santos", "Ribeiro"],
-          correct: "Tiago",
-        },
-        {
-          number: 3,
-          question: "How much is 1+1?",
-          options: ["1", "3", "2", "4"],
-          correct: "2",
-        },
-      ],
-    },
-    {
-      title: "Chapter II",
-      video: "../videos/SkillifyPromoFinal.mp4",
-      exercises: [],
-    },
-    {
-      title: "Chapter III",
-      video: "../videos/SkillifyPromoFinal.mp4",
-      exercises: [],
-    },
-    {
-      title: "Chapter IV",
-      video: "../videos/SkillifyPromoFinal.mp4",
-      exercises: [],
-    },
-  ],
-};
+const selectedCourse = courseModel.getSelectedCourse();
 
 // CHECK IF ITS THE FIRST TIME THE USER IS OPENING THIS COURSE
 for (let user in userModel.users) {
@@ -389,9 +333,6 @@ const checkIfCourseCompleted = () => {
     }
   }
 };
-
-// After loading page, "Chapter I" is shown
-selectChapter("Chapter I");
 
 // Check if the user completed all chapters
 checkIfCourseCompleted();
