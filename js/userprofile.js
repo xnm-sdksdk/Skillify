@@ -119,3 +119,8 @@ document.querySelector("#logOutBtn").addEventListener("click", () => {
     window.open("../html/index.html", "_self");
   });
 });
+
+// OPEN CATALOG BUTTON
+document.querySelector("#openCatalogBtn").addEventListener("click", () => {
+  window.open("../html/catalog.html", "_self");
+});
