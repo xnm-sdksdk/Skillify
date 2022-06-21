@@ -26,3 +26,13 @@ function closeSlideMenu() {
     document.getElementById('nav_menu').style.width = '0x';
     document.getElementById('content_menu').style.marginRight = '0px';
 }
+
+
+// GO UP BUTTON
+const go_up = document.getElementById('go_up');
+go_up.addEventListener('click', () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    })
+})
