@@ -14,7 +14,32 @@ class Course {
     this.btnDescription = btnDescription;
     this.initialVideo = initialVideo;
     this.chapters = chapters;
-    this.comments = [];
+    this.comments = [
+      {
+        username: "TiagoRibeiro.25",
+        text: "Curso muito bom!",
+      },
+      {
+        username: "Random User on the Internet",
+        text: "Loved it!",
+      },
+      {
+        username: "Tkinter Enjoyer",
+        text: "Kinda cool ngl",
+      },
+      {
+        username: "User123",
+        text: "Recommended 9/10",
+      },
+      {
+        username: "LoveCatsUwU",
+        text: "Loved this one. Gonna watch the rest for sure!",
+      },
+      {
+        username: "neverSleep25",
+        text: "10/10",
+      },
+    ];
     this.likes = 0;
   }
 
@@ -56,72 +81,72 @@ export function init() {
     : [
         new Course(
           "Communication",
-          "description",
-          "Button description",
-          "video path",
+          "Good communication skills are absolutely crucial to any successful workplace. As such, it's imperative that leadership masters and demonstrates good behaviors around communication, including nonverbal communication, body language, listening, and understanding. ",
+          "Express yourself better!",
+          "../../videos/SkillifyPromoFinal.mp4",
           ["chapters"]
         ),
         new Course(
           "Leadership",
-          "description",
-          "Button description",
-          "video path",
+          "Leadership is about empathy. It is about having the ability to relate to and connect with people for the purpose of inspiring and empowering their lives",
+          "Become a Leader!",
+          "../../videos/SkillifyPromoFinal.mp4",
           ["chapters"]
         ),
         new Course(
           "Creativity",
-          "description",
-          "Button description",
-          "video path",
+          "Creativity is supposed to help develop innovative solutions to problems. It requires an openness to innovation and mental flexibility. In many sectors, creativity techniques are seen as a means to an end and are designed to achieve better results.",
+          "Create and Innovate",
+          "../../videos/SkillifyPromoFinal.mp4",
           ["chapters"]
         ),
         new Course(
           "Decision Making",
-          "description",
-          "Button description",
-          "video path",
+          "Decision-making skills are about your ability to choose a good option out of two or more alternatives",
+          "Make better decisions!",
+          "../../videos/SkillifyPromoFinal.mp4",
           ["chapters"]
         ),
         new Course(
           "Time Management",
-          "description",
-          "Button description",
-          "video path",
+          "When decisions need to be made quickly, you may benefit from time management skills that will help you keep track of important deadlines. Time management will also help you delviver timely status reports so that everyone is keep updated on challenges and solutions. If you have complex issues with multiple decisions to make, time management can help you stay organized during each stage of the decision-making process.",
+          "Having trouble managing Time?",
+          "../../videos/SkillifyPromoFinal.mp4",
           ["chapters"]
         ),
         new Course(
           "Adaptability",
-          "description",
-          "Button description",
-          "video path",
+          "Adaptability means being flexible and able to change in order to become successful",
+          "Adapt like a chameleon!",
+          "../../videos/SkillifyPromoFinal.mp4",
           ["chapters"]
         ),
         new Course(
           "Persuasion",
-          "description",
-          "Button description",
-          "video path",
+          "Persuasion is the ability to make intentional and successful efforts in influencing someone either through written or verbal communication",
+          "Learn to change people's mind!",
+          "../../videos/SkillifyPromoFinal.mp4",
           ["chapters"]
         ),
         new Course(
           "Problem Solving",
-          "description",
-          "Button description",
-          "video path",
+          "Problem-solving skills are an important part of decision-making. You need to be able to factor in different viewpoints in order to make a thoughtful decision. It's also important to observe challenges and solutions from a neutral and non-emotional viewpoint, whenever possible. Strong problem-solving skills can also help you focus on relevant details and form decisions more quickly and effectively.",
+          "Find the best solution for a problem!",
+          "../../videos/SkillifyPromoFinal.mp4",
           ["chapters"]
         ),
         new Course(
           "Collaboration",
-          "description",
-          "Button description",
-          "video path",
+          "At some point, you may want to collaborate with coworkers to achieve common goals. For example, you may want to collaborate with your marketing manager on the best way to approach an important client. Teamwork can help you brainstorm the best options to solve challenges and help you with decision-making by showing you different perspectives. ",
+          "Team work, makes the dream work!",
+          "../../videos/SkillifyPromoFinal.mp4",
           ["chapters"]
         ),
         new Course(
           "Emotional Intelligence",
-          "description",
-          "Button description",
-          "video path",
+          "Emotional intelligence means you are aware of your emotions and can express them in a way that's healthy, informative and motivating to those around you. Your emotions can inspire solutions to challenges and help you express your goals to others. Emotional intelligence can also guide your analysis of challenges and solutions.",
+          "Master your emotions!",
+          "../../videos/SkillifyPromoFinal.mp4",
           ["chapters"]
         ),
       ];
@@ -159,7 +184,7 @@ export function getSelectedCourse() {
 export function setSelectedCourse(name) {
   for (let course in courses) {
     if (courses[course].title == name) {
-      sessionStorage.selectedCourse = JSON.stringify(course);
+      sessionStorage.selectedCourse = JSON.stringify(courses[course]);
       break;
     }
   }

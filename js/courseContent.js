@@ -4,7 +4,6 @@ import * as courseModel from "./models/courseModel.js";
 userModel.init();
 courseModel.init();
 
-//TODO un-comment after finishing
 if (!userModel.isLogged()) {
   window.open("../html/logIn.html", "_self");
 }
