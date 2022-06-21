@@ -22,8 +22,12 @@
   <body>
     <div class="container">
       <div class="profile-box">
-        <img src="../imgs/userprofile_imgs/menu.png" class="menu-icon" />
-        <img src="../imgs/userprofile_imgs/arrow.png" class="back-icon" />
+        <img
+          src="../imgs/userprofile_imgs/menu.png"
+          title="LOG OUT"
+          class="menu-icon"
+          id="logOutBtn"
+        />
         <img class="profile-pic" id="profile-pic" />
         <h3>UserName</h3>
         <p>Description</p>
@@ -40,6 +44,7 @@
     </div>
 
     <!-- MODALS -->
+    <!-- COURSES LIST -->
     <div class="modal fade" id="courseListModal">
       <div class="modal-dialog">
         <div class="modal-content">
@@ -67,6 +72,22 @@
               Close
             </button>
           </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- LOG OUT CONFIRMATION -->
+    <div class="modal fade" id="logOutModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header justify-content-center">
+            <h5 class="modal-title">Are you sure you want to Log Out?</h5>
+          </div>
+
+          <div
+            class="modal-footer justify-content-center"
+            id="btnSection"
+          ></div>
         </div>
       </div>
     </div>

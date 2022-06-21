@@ -93,3 +93,29 @@ document.querySelector("#courseListBtn").addEventListener("click", () => {
     });
   }
 });
+
+// LOG OUT BUTTON
+document.querySelector("#logOutBtn").addEventListener("click", () => {
+  $("#logOutModal").modal({ show: true });
+
+  document.querySelector("#btnSection").innerHTML = `
+  <button
+    type="button"
+    class="btn btn-secondary"
+    id="logOutConfirmBtn"
+  >Yes</button>
+  <!-- CLOSE MODAL BUTTON -->
+  <button
+    type="button"
+    class="btn btn-secondary"
+    data-dismiss="modal"
+  >
+    No
+  </button>
+  `;
+  document.querySelector("#logOutConfirmBtn").addEventListener("click", () => {
+    userModel.logout();
+
+    window.open("../html/logIn.html", "_self");
+  });
+});
