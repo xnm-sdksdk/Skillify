@@ -443,32 +443,60 @@ export function init() {
           "../../videos/6 - Adaptability/Skills for Success – Adaptability.mp4",
           [
             {
-              title: "Adaptability in the Workplace",
+              title: "Adapt and Overcome",
               video:
-                "../../videos/5 - Time Management/How to manage your time more effectively (according to machines) - Brian Christian.mp4",
+                "../../videos/6 - Adaptability/Adaptability in the workplace.mp4",
               exercises: [
                 {
                   number: 1,
-                  question: "How to get work done?",
+                  question: "What is Adaptability?",
                   options: [
-                    "Minimize context switches",
-                    "Procrastinate",
-                    "Spend tike ranking your work",
-                    "None of the above",
+                    "Don't try new perspectives",
+                    "Being able to adjust to new situations",
+                    "Stick to the main plan no matter what",
+                    "Inflexibility in handling change",
                   ],
-                  correct: "Minimize context switches",
+                  correct: "Being able to adjust to new situations",
                 },
                 {
                   number: 2,
-                  question: "What is interrupt coalescing?",
+                  question: "Why Adaptability is important?",
                   options: [
-                    "To interrupt your work every hour",
-                    "To group interruptions together based on how long they can afford to wait",
-                    "To time your interruptions based on importance",
+                    "Flexibility through challenges is not good",
+                    "A new ideia is always a bad thing",
+                    "Because change is an opportunity to not improve",
+                    "The main ideia or plan not always work's",
+                  ],
+                  correct: "The main ideia or plan not always work's",
+                },
+              ],
+            },
+            {
+              title: "How to adapt to any situation",
+              video:
+                "../../videos/6 - Adaptability/Adaptability & Flexibility - SkillsUSA.mp4",
+              exercises: [
+                {
+                  number: 1,
+                  question: "Why is important to develop these skills?",
+                  options: [
+                    "Is a high demand skill in our changing world",
+                    "Because it helps you to master a technology",
+                    "It helps you to make friends",
                     "None of the above",
                   ],
-                  correct:
-                    "To group interruptions together based on how long they can afford to wait",
+                  correct: "Is a high demand skill in our changing world",
+                },
+                {
+                  number: 2,
+                  question: "What's the main thing to do after you fail?",
+                  options: [
+                    "Adapt",
+                    "Give up",
+                    "Work Harder",
+                    "None of the above",
+                  ],
+                  correct: "Adapt",
                 },
               ],
             },
@@ -479,28 +507,192 @@ export function init() {
           "Persuasion is the ability to make intentional and successful efforts in influencing someone either through written or verbal communication",
           "Learn to change people's mind!",
           "../../videos/7 - Persuasion/Persuasion mind trick_ How to impress in meetings.mp4",
-          ["chapters"]
+          [
+            {
+              title: "Upgrade your persuasion skills",
+              video:
+                "../../videos/7 - Persuasion/Secret persuasion mind trick.mp4",
+              exercises: [
+                {
+                  number: 1,
+                  question: "How to persuade someone?",
+                  options: [
+                    "Ask them something as it is",
+                    "Ask them something small them upgrade the request",
+                    "Ask them something big",
+                    "None of the above",
+                  ],
+                  correct: "Ask them something small them upgrade the request",
+                },
+                {
+                  number: 2,
+                  question: "How to be heard?",
+                  options: [
+                    "Speak louder",
+                    "Expressing your opinion by adopting a point of view",
+                    "Speak in topics",
+                    "None of the above",
+                  ],
+                  correct:
+                    "Expressing your opinion by adopting a point of view",
+                },
+                {
+                  number: 3,
+                  question: "What is persuasive skills?",
+                  options: [
+                    "Do it after you ask them",
+                    "Express your ideia without a plan",
+                    "Getting people to agree with you by expressing facts according to a plan",
+                    "None of the above",
+                  ],
+                  correct:
+                    "Getting people to agree with you by expressing facts according to a plan",
+                },
+              ],
+            },
+          ]
         ),
         new Course(
           "Problem Solving",
           "Problem-solving skills are an important part of decision-making. You need to be able to factor in different viewpoints in order to make a thoughtful decision. It's also important to observe challenges and solutions from a neutral and non-emotional viewpoint, whenever possible. Strong problem-solving skills can also help you focus on relevant details and form decisions more quickly and effectively.",
           "Find the best solution for a problem!",
           "../../videos/8 - Problem Solving/What is Creative Problem Solving.mp4",
-          ["chapters"]
+          [
+            {
+              title: "Problem Solving",
+              video:
+                "../../videos/7 - Persuasion/Secret persuasion mind trick.mp4",
+              exercises: [
+                {
+                  number: 1,
+                  question: "What's the main issue to solve a problem?",
+                  options: [
+                    "Take action",
+                    "Check result",
+                    "Identify the problem",
+                    "None of the above",
+                  ],
+                  correct: "Identify the problem",
+                },
+              ],
+            },
+          ]
         ),
         new Course(
           "Collaboration",
           "At some point, you may want to collaborate with coworkers to achieve common goals. For example, you may want to collaborate with your marketing manager on the best way to approach an important client. Teamwork can help you brainstorm the best options to solve challenges and help you with decision-making by showing you different perspectives. ",
           "Team work, makes the dream work!",
-          "../../videos/9- Collaboration/5 Tips For Effective Teamwork.mp4",
-          ["chapters"]
+          "../../videos/9- Collaboration/Secrets Of Successful Teamwork_ Insights From Google.mp4",
+          [
+            {
+              title: "Team work makes the dream work",
+              video:
+                "../../videos/9- Collaboration/5 Tips For Effective Teamwork.mp4",
+              exercises: [
+                {
+                  number: 1,
+                  question: "What lesson can you retrieve from this video?",
+                  options: [
+                    "Team work, makes the dream work",
+                    "Work alone is always better",
+                    "Working in team is not good",
+                    "None of the above",
+                  ],
+                  correct: "Team work, makes the dream work",
+                },
+                {
+                  number: 2,
+                  question: "Why do Tech Companies motivate to work together?",
+                  options: [
+                    "To play games in teams",
+                    "Because it's fun",
+                    "It increases productivity",
+                    "None of the above",
+                  ],
+                  correct: "It increases productivity",
+                },
+              ],
+            },
+            {
+              title: "What make a great team great",
+              video:
+                "../../videos/9- Collaboration/How Google builds the perfect team.mp4",
+              exercises: [
+                {
+                  number: 1,
+                  question: "What is necessary to make a good team?",
+                  options: [
+                    "Good empathy",
+                    "The way people treat each other",
+                    "Ignore the other members",
+                    "None of the above",
+                  ],
+                  correct: "The way people treat each other",
+                },
+                {
+                  number: 2,
+                  question: "How should a team communicate?",
+                  options: [
+                    "All should communicate with each other in certain time",
+                    "The role of leader should change frequently",
+                    "The team should speak at the same time",
+                    "None of the above",
+                  ],
+                  correct:
+                    "All should communicate with each other in certain time",
+                },
+              ],
+            },
+          ]
         ),
         new Course(
           "Emotional Intelligence",
           "Emotional intelligence means you are aware of your emotions and can express them in a way that's healthy, informative and motivating to those around you. Your emotions can inspire solutions to challenges and help you express your goals to others. Emotional intelligence can also guide your analysis of challenges and solutions.",
           "Master your emotions!",
-          "../../videos/10 - Emotional Intelligence/Emotional Intelligence.mp4",
-          ["chapters"]
+          "../../videos/10 - Emotional Intelligence/Emotions and the Brain.mp4",
+          [
+            {
+              title: "Emotional Intelligence",
+              video:
+                "../../videos/10 - Emotional Intelligence/Emotional Intelligence.mp4",
+              exercises: [
+                {
+                  number: 1,
+                  question: "What are emotions determined by?",
+                  options: [
+                    "Logic and Emotions",
+                    "Just emotions",
+                    "Choices in general",
+                    "None of the above",
+                  ],
+                  correct: "Logic and Emotions",
+                },
+                {
+                  number: 2,
+                  question:
+                    "What happens to our brain when certain situations happen?",
+                  options: [
+                    "Our brain freezes",
+                    "Our brain tries to run",
+                    "Our brain enters in panic",
+                    "Our brain releases hormones",
+                  ],
+                  correct: "Our brain releases hormones",
+                },
+                {
+                  number: 3,
+                  question: "What can trigger an emotional response?",
+                  options: [
+                    "Forgetting something",
+                    "A wrong behaviour",
+                    "Thinking about something",
+                    "None of the above",
+                  ],
+                  correct: "Thinking about something",
+                },
+              ],
+            },
+          ]
         ),
       ];
 }
