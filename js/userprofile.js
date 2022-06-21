@@ -116,6 +116,6 @@ document.querySelector("#logOutBtn").addEventListener("click", () => {
   document.querySelector("#logOutConfirmBtn").addEventListener("click", () => {
     userModel.logout();
 
-    window.open("../html/logIn.html", "_self");
+    window.open("../html/index.html", "_self");
   });
 });
