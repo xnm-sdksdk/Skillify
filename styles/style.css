@@ -20,11 +20,6 @@ html {
 
 /*Screen size Iphone XR - 414 x 896*/
 @media only screen and (min-width: 414px) {
-    .header {
-        margin: 0px 0px 0px 0px;
-        display: grid;
-    }
-
     a {
         text-decoration: none;
     }
@@ -439,26 +434,17 @@ html {
         margin: 25px 0px 0px 5px;
     }
     .dot {
-        height: 35px;
-        width: 35px;
+        height: 55px;
+        width: 55px;
         background-color: #ffffff;
         border-radius: 50%;
         display: inline-block;
-        margin: 10px 10px 0px 0px;
-    }
-
-    #menu {
-        width: 150%;
         margin: 10px 0px 0px 0px;
     }
 
-    .dot_close {
-        height: 35px;
-        width: 35px;
-        background-color: #ffffff;
-        border-radius: 50%;
-        display: inline-block;
-        margin: 10px 15px 0px 0px;
+    #menu {
+        width: 120%;
+        margin: 10px 0px 0px 0px;
     }
 
     #logo_intro {
