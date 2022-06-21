@@ -129,7 +129,7 @@ const renderComments = (n = selectedCourse.comments.length - 5) => {
         type="button"
         class="btn btn-primary py-2 p-5"
         id="loadAllCommentsBtn"
-    >Load All Comments</button>
+    >Expand</button>
   `
       : `
   <br>
@@ -137,7 +137,7 @@ const renderComments = (n = selectedCourse.comments.length - 5) => {
       type="button"
       class="btn btn-primary py-2 p-5"
       id="ReduceAllCommentsBtn"
-  >Reduce to 5 Comments</button>
+  >Collapse</button>
 `;
   document
     .querySelector("#loadAllCommentsBtn")
