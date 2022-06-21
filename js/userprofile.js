@@ -1,8 +1,12 @@
 import * as userModel from "./models/userModel.js";
+import * as courseModel from "./models/courseModel.js";
 
 if (!userModel.isLogged()) {
   window.open("../html/logIn.html", "_self");
 }
+
+courseModel.init();
+userModel.init();
 
 // Get User Logged In (as an object)
 const currentUser = userModel.getUserLogged();
@@ -76,10 +80,10 @@ document.querySelector("#courseListBtn").addEventListener("click", () => {
         this.parentNode.previousSibling.previousSibling.previousSibling
           .previousSibling.innerHTML;
 
-      for (let course in coursesModel.courses) {
-        if (coursesModel.courses[course] === courseTitle) {
+      for (let course in courseModel.courses) {
+        if (courseModel.courses[course] === courseTitle) {
           sessionStorage.selectedCourse = JSON.stringify(
-            coursesModel.courses[course]
+            courseModel.courses[course]
           );
           break;
         }

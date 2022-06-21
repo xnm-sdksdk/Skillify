@@ -20,6 +20,8 @@ const currentUser = {
   courses: [],
 }; */
 
+/* const selectedCourse = courseModel.getSelectedCourse() */
+
 //! HARD CODED COURSE FOR TESTS
 const selectedCourse = {
   title: "Nome do curso",
