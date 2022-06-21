@@ -296,7 +296,7 @@ function selectChapter(chapterSelected) {
             currentUser.courses[course].status = "completed";
 
             // save data to session storage
-            sessionStorage.loggedUser = currentUser;
+            sessionStorage.loggedUser = JSON.stringify(currentUser);
             // save data to local storage
             for (let user in userModel.users) {
               if (userModel.users[user].username == currentUser.username) {

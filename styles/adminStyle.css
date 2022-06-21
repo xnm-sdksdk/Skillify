@@ -6,6 +6,12 @@
   --fifth-color: #4b48a3;
   --six-color: #2943a3;
 }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Adelle Mono", Flex-Bold;
+}
 
 @import url("https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/css/bootstrap.min.css");
 html,

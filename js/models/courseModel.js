@@ -440,35 +440,66 @@ export function init() {
           "Adaptability",
           "Adaptability means being flexible and able to change in order to become successful",
           "Adapt like a chameleon!",
-          "../../videos/SkillifyPromoFinal.mp4",
-          ["chapters"]
+          "../../videos/6 - Adaptability/Skills for Success – Adaptability.mp4",
+          [
+            {
+              title: "Adaptability in the Workplace",
+              video:
+                "../../videos/5 - Time Management/How to manage your time more effectively (according to machines) - Brian Christian.mp4",
+              exercises: [
+                {
+                  number: 1,
+                  question: "How to get work done?",
+                  options: [
+                    "Minimize context switches",
+                    "Procrastinate",
+                    "Spend tike ranking your work",
+                    "None of the above",
+                  ],
+                  correct: "Minimize context switches",
+                },
+                {
+                  number: 2,
+                  question: "What is interrupt coalescing?",
+                  options: [
+                    "To interrupt your work every hour",
+                    "To group interruptions together based on how long they can afford to wait",
+                    "To time your interruptions based on importance",
+                    "None of the above",
+                  ],
+                  correct:
+                    "To group interruptions together based on how long they can afford to wait",
+                },
+              ],
+            },
+          ]
         ),
         new Course(
           "Persuasion",
           "Persuasion is the ability to make intentional and successful efforts in influencing someone either through written or verbal communication",
           "Learn to change people's mind!",
-          "../../videos/SkillifyPromoFinal.mp4",
+          "../../videos/7 - Persuasion/Persuasion mind trick_ How to impress in meetings.mp4",
           ["chapters"]
         ),
         new Course(
           "Problem Solving",
           "Problem-solving skills are an important part of decision-making. You need to be able to factor in different viewpoints in order to make a thoughtful decision. It's also important to observe challenges and solutions from a neutral and non-emotional viewpoint, whenever possible. Strong problem-solving skills can also help you focus on relevant details and form decisions more quickly and effectively.",
           "Find the best solution for a problem!",
-          "../../videos/SkillifyPromoFinal.mp4",
+          "../../videos/8 - Problem Solving/What is Creative Problem Solving.mp4",
           ["chapters"]
         ),
         new Course(
           "Collaboration",
           "At some point, you may want to collaborate with coworkers to achieve common goals. For example, you may want to collaborate with your marketing manager on the best way to approach an important client. Teamwork can help you brainstorm the best options to solve challenges and help you with decision-making by showing you different perspectives. ",
           "Team work, makes the dream work!",
-          "../../videos/SkillifyPromoFinal.mp4",
+          "../../videos/9- Collaboration/5 Tips For Effective Teamwork.mp4",
           ["chapters"]
         ),
         new Course(
           "Emotional Intelligence",
           "Emotional intelligence means you are aware of your emotions and can express them in a way that's healthy, informative and motivating to those around you. Your emotions can inspire solutions to challenges and help you express your goals to others. Emotional intelligence can also guide your analysis of challenges and solutions.",
           "Master your emotions!",
-          "../../videos/SkillifyPromoFinal.mp4",
+          "../../videos/10 - Emotional Intelligence/Emotional Intelligence.mp4",
           ["chapters"]
         ),
       ];

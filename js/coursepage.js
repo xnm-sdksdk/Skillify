@@ -119,6 +119,10 @@ const renderComments = (n = selectedCourse.comments.length - 5) => {
 
           // save to LocalStorage
           localStorage.courses = JSON.stringify(courseModel.courses);
+
+          // update SessionStorage
+          courseModel.setSelectedCourse(courseModel.courses[course].title);
+          break;
         }
       }
 

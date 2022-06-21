@@ -1,19 +1,26 @@
 :root {
-    --primary-color: #f45ea0;
-    --second-color: #b555a1;
-    --third-color: #9051a2;
-    --fourth-color: #674ba2;
-    --fifth-color: #4b48a3;
-    --six-color: #2943a3;
+  --primary-color: #f45ea0;
+  --second-color: #b555a1;
+  --third-color: #9051a2;
+  --fourth-color: #674ba2;
+  --fifth-color: #4b48a3;
+  --six-color: #2943a3;
 }
 
 @font-face {
-    font-family: 'Adelle Mono', Flex-Bold;
-    src: url('../fonts/AdelleMonoFlex-Bold.eot?#iefix') format('embedded-op')
+  font-family: "Adelle Mono", Flex-Bold;
+  src: url("../fonts/AdelleMonoFlex-Bold.eot?#iefix") format("embedded-op");
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Adelle Mono", Light;
 }
 
 /* p {
@@ -24,64 +31,63 @@ html {
 }  */
 
 @media screen and (min-width: 414px) {
-    .header {
-        margin: 0px 0px 0px 0px;
-        display: grid;
-    }
+  .header {
+    margin: 0px 0px 0px 0px;
+    display: grid;
+  }
 
-    body {
-        background-color: var(--primary-color);
-        display: grid;
-    }
+  body {
+    background-color: var(--primary-color);
+    display: grid;
+  }
 
-    #title {
-        color: #ffffff;
-        font-family: 'Adelle Mono', Flex-Bold;
-        font-size: 40px;
-        margin: 15px 0px 0px 5px;
-    }
+  #title {
+    color: #ffffff;
+    font-family: "Adelle Mono", Flex-Bold;
+    font-size: 40px;
+    margin: 15px 0px 0px 5px;
+  }
 
-    .dot {
-        height: 35px;
-        width: 35px;
-        background-color: #ffffff;
-        border-radius: 50%;
-        display: inline-block;
-        margin: 15px 10px 0px 15px;
-    }
+  .dot {
+    height: 35px;
+    width: 35px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 15px 10px 0px 15px;
+  }
 
-    #menu {
-        width: 60%;
-        margin: 7px 0px 0px 6px;
-        display: block;
-    }
+  #menu {
+    width: 60%;
+    margin: 7px 0px 0px 6px;
+    display: block;
+  }
 
+  #levels_title {
+    color: #ffffff;
+    font-family: "Adelle Mono", Flex-Bold;
+    font-size: 50px;
+    text-align: center;
+  }
 
-    #levels_title {
-        color: #ffffff;
-        font-family: 'Adelle Mono', Flex-Bold;
-        font-size: 50px;
-        text-align: center;
-    }
+  #levels_subtitle {
+    color: white;
+    font-family: "Adelle Mono", Flex-Bold;
+    font-size: 30px;
+    text-align: center;
+  }
 
-    #levels_subtitle {
-        color: white;
-        font-family: 'Adelle Mono', Flex-Bold;
-        font-size: 30px;
-        text-align: center;
-    }
+  .dot {
+    height: 35px;
+    width: 35px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 15px 10px 0px 15px;
+  }
 
-    .dot {
-        height: 35px;
-        width: 35px;
-        background-color: #ffffff;
-        border-radius: 50%;
-        display: inline-block;
-        margin: 15px 10px 0px 15px;
-    }
-
-    /* Card V1 */
-    /* .card {
+  /* Card V1 */
+  /* .card {
         position: relative;
         width: 250px;
         height: 270px;
@@ -129,8 +135,8 @@ html {
         font-size: 36px;
     } */
 
-    /* Card V2 */
-    /* .card {
+  /* Card V2 */
+  /* .card {
         position: relative;
         width: 250px;
         height: 270px;
@@ -181,61 +187,60 @@ html {
         font-size: 36px;
     } */
 
-    /* Card 3 */
-    .card {
-        position: relative;
-        width: 250px;
-        height: 250px;
-        margin: 0px 0px 0px 80px;
-        background:
-            linear-gradient(43deg, #f45ea0 0%, #9051a2 46%, #4b48a3 100%);
-        background-size: cover;
-        border-radius: 20px;
-        overflow: hidden;
-    }
+  /* Card 3 */
+  .card {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    margin: 0px 0px 0px 80px;
+    background: linear-gradient(43deg, #f45ea0 0%, #9051a2 46%, #4b48a3 100%);
+    background-size: cover;
+    border-radius: 20px;
+    overflow: hidden;
+  }
 
-    .card_content {
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        height:100%;
-        padding: 20px;
-        background-color: #ffff;
-        border-top-left-radius: 20px;
-        transform: translateY(190px);
-        transition: transform .25s;
-    }
+  .card_content {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    background-color: #ffff;
+    border-top-left-radius: 20px;
+    transform: translateY(190px);
+    transition: transform 0.25s;
+  }
 
-    .card_content::before {
-        content: "";
-        position: absolute;
-        top: -47px;
-        right: -45px;
-        width: 100px;
-        height: 100px;
-        transform: rotate(-175deg);
-        border-radius: 50%;
-        box-shadow: inset 48px 48px #fff;
-    }
+  .card_content::before {
+    content: "";
+    position: absolute;
+    top: -47px;
+    right: -45px;
+    width: 100px;
+    height: 100px;
+    transform: rotate(-175deg);
+    border-radius: 50%;
+    box-shadow: inset 48px 48px #fff;
+  }
 
-    .card_title {
-        color: #2943a3;
-        line-height:15px;
-    }
+  .card_title {
+    color: #2943a3;
+    line-height: 15px;
+  }
 
-    .card_description {
-        font-size: 14px;
-        opacity: 0;
-        transition: opacity .5s;
-    }
+  .card_description {
+    font-size: 14px;
+    opacity: 0;
+    transition: opacity 0.5s;
+  }
 
-    .card:hover .card_content {
-        transform: translateY(0);
-    }
+  .card:hover .card_content {
+    transform: translateY(0);
+  }
 
-    .card:hover .card_description {
-        opacity: 1;
-        transition-delay: .25s;
-    }
+  .card:hover .card_description {
+    opacity: 1;
+    transition-delay: 0.25s;
+  }
 }

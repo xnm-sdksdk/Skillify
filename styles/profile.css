@@ -15,6 +15,13 @@ body {
   background-color: var(--color--secondary);
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Adelle Mono", Light;
+}
+
 @font-face {
   font-family: "Adelle Mono", Flex-Bold;
   src: url("../fonts/AdelleMonoFlex-Bold.ttf") format("embedded-op");

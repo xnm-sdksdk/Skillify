@@ -7,6 +7,13 @@
   --six-color: #2943a3;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Adelle Mono", Light;
+}
+
 body {
   background-color: var(--primary-color);
 }
